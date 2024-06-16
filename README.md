@@ -30,13 +30,11 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-* Inital Commit
+* [v0.0.1-dev] Inital Commit
 
 ## Contributing
 
-This extension was creatied using the following tutorial: https://code.visualstudio.com/api/get-started/your-first-extension
-
-The dependencies should not be required to contribute to the project.
+This extension was creatied using the following tutorial: https://code.visualstudio.com/api/get-started/your-first-extension. The dependencies should not be required to contribute to the project.
 
 The current main file is here: https://github.com/DSchaedler/dragonrubyautocomplete/blob/main/snippets.json
 
