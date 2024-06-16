@@ -22,7 +22,7 @@ Update your snippets directly:
 
 ### Code Blocks
 
-* Pause when Unfocused  
+* [Pause when Unfocused](https://docs.dragonruby.org/#/guides/deploying-to-itch?id=consider-adding-pause-when-game-is-in-background)  
 
 ## Requirements
 
