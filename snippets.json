@@ -1,0 +1,79 @@
+{
+	"def tick args": {
+		"scope": "ruby,mruby,dragonruby",
+		"prefix": "def tick args",
+		"body": [
+			"def tick args",
+			"  $0",
+			"end"
+		],
+		"description": "Main Tick Loop"
+	},
+
+	"args.outputs.labels": {
+		"scope": "ruby,mruby,dragonruby",
+		"prefix": "args.otuputs.labels",
+		"body": [
+			"args.ouputs.labels << [${1:x_pos}, ${2:y_pos}, '${3:string}']"
+		],
+		"description": "String Label"
+	},
+
+	"args.outputs.sprites": {
+	  "scope": "ruby,mruby,dragonruby",
+		"prefix": "args.outputs.sprites",
+		"body": [
+		"args.outputs.sprites << [${1:x_pos}, ${2:y_pos}, ${3:width}, ${4:height}, '${5:img_path}', ${6:rotation_angle_optional}]"
+		],
+		"description": "Sprite"
+	},
+
+	"args.state.var": {
+	  "scope": "ruby,mruby,dragonruby",
+		"prefix": "args.state.",
+		"body": [
+		"args.state.${1:var} = $2"
+		],
+		"description": "Engine Persistant Variable"
+	},
+
+	"click.point.x": {
+	  "scope": "ruby,mruby,dragonruby",
+		"prefix": "args.inputs.mouse.click.point.x",
+		"body": [
+		"args.inputs.mouse.click.point.x"
+		],
+		"description": "Mouse Click X Position"
+	},
+
+	"click.point.y": {
+	  "scope": "ruby,mruby,dragonruby",
+		"prefix": "args.inputs.mouse.click.point.y",
+		"body": [
+		"args.inputs.mouse.click.point.y"
+		],
+		"description": "Mouse Click Y Position"
+	},
+
+	"Pause when Unfocused": {
+	  "scope": "ruby,mruby,dragonruby",
+		"prefix": "if (!args.inputs.keyboard.has_focus",
+		"body": [
+		"# if the keyboard doesn't have focus, and the game is in production mode, and it isn't the first tick",
+  	"if (!args.inputs.keyboard.has_focus &&",
+    "    args.gtk.production &&",
+    "    args.state.tick_count != 0)",
+    "  args.outputs.background_color = [0, 0, 0]",
+    "  args.outputs.labels << { x: 640,",
+    "                           y: 360,",
+    "                           text: 'Game Paused (click to resume).',",
+    "                           alignment_enum: 1,",
+    "                           r: 255, g: 255, b: 255 }",
+    "  # consider setting all audio volume to 0.0",
+    "else",
+    "  # perform your regular tick function",
+    "end"
+		],
+		"description": "Pause when Unfocused"
+	}
+}
