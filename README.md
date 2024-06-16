@@ -9,6 +9,8 @@ https://github.com/DSchaedler/dragonrubyautocomplete/releases
 `def tick args`  
 `args.outputs.labels`  
 `args.outputs.sprites`  
+`args.outputs.sounds`
+`args.gtk.queue_sound`
 `args.state.var`  
 `args.inputs.mouse.click.point.x`  
 `args.inputs.mouse.click.point.y`  
@@ -30,6 +32,7 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+* [v0.0.2-dev] Support for Sounds. Link to Documentation.
 * [v0.0.1-dev] Inital Commit
 
 ## Contributing

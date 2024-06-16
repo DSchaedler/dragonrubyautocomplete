@@ -3,6 +3,9 @@
 		"scope": "ruby,mruby,dragonruby",
 		"prefix": "def tick args",
 		"body": [
+			"DragonRuby is built on mruby, not C Ruby: https://mruby.org/docs/api/",
+			"Please read the engine documentation: https://docs.dragonruby.org/#/",
+			"",
 			"def tick args",
 			"  $0",
 			"end"
@@ -32,7 +35,7 @@
 	  "scope": "ruby,mruby,dragonruby",
 		"prefix": "args.state.",
 		"body": [
-		"args.state.${1:var} = $2"
+		"args.state.${1:var} = $2 $3"
 		],
 		"description": "Engine Persistant Variable"
 	},
@@ -53,6 +56,24 @@
 		"args.inputs.mouse.click.point.y"
 		],
 		"description": "Mouse Click Y Position"
+	},
+
+	"args.outputs.sounds": {
+		"scope": "ruby,mbruby,dragonruby",
+		"prefix": "args.outputs.sounds",
+		"body":[
+			"args.outputs.sounds << '${1:wav_or_ogg_path}'"
+		],
+		"description": "Play Sound"
+	},
+
+	"args.gtk.queue_sound": {
+		"scope": "ruby,mbruby,dragonruby",
+		"prefix": "args.gtk.queue_sound",
+		"body":[
+			"args.gtk.queue_sound '${1:ogg_path}'"
+		],
+		"description": "Play Sound"
 	},
 
 	"Pause when Unfocused": {

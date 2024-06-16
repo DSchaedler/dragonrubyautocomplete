@@ -4,4 +4,5 @@ All notable changes to the "dragonrubyautocomplete" extension will be documented
 
 ## [Unreleased]
 
-- Initial commit
+- [v0.0.2-dev] Support for Sounds. Link to Documentation.
+- [v0.0.1-dev] Initial commit
