@@ -24,20 +24,6 @@ Update your snippets directly:
 
 * [Pause when Unfocused](https://docs.dragonruby.org/#/guides/deploying-to-itch?id=consider-adding-pause-when-game-is-in-background)  
 
-## Requirements
-
-N/A
-
-## Extension Settings
-
-This extension contributes the following settings:
-
-* N/A
-
-## Known Issues
-
-* N/A
-
 ## Release Notes
 
 * [v0.0.2-dev] Support for Sounds. Link to Documentation.
