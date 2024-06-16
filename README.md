@@ -36,4 +36,10 @@ This extension was creatied using the following tutorial: https://code.visualstu
 
 The dependencies should not be required to contribute to the project.
 
+The current main file is here: https://github.com/DSchaedler/dragonrubyautocomplete/blob/main/snippets.json
+
 Please do not contribute any unlicensed code or full samples to this project.
+
+Useful Links
+[Testing Extensions](https://code.visualstudio.com/api/working-with-extensions/testing-extension)  
+[Creting Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets)  
