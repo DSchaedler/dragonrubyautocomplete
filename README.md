@@ -31,7 +31,14 @@ Update your snippets directly:
 
 ## Contributing
 
-This extension was creatied using the following tutorial: https://code.visualstudio.com/api/get-started/your-first-extension. The dependencies should not be required to contribute to the project.
+This extension was creatied using the following tutorial: https://code.visualstudio.com/api/get-started/your-first-extension. The dependencies are not required to contribute to the project, but are highly recommended.
+
+1. Install [Visual Stuido Code](https://code.visualstudio.com/)  
+2. Install [nodejs](https://nodejs.org/)
+3. Install [git](https://git-scm.com/)
+4. Install Yeoman and the Visual Studio Code Generator  
+   a. `npm install --global yo generator-code`  
+5. Clone this repository as a project
 
 The current main file is here: https://github.com/DSchaedler/dragonrubyautocomplete/blob/main/snippets.json
 
