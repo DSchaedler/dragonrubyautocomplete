@@ -2,6 +2,8 @@
 
 Visual Studio extension containing snippets to streamline DragonRuby Development
 
+https://github.com/DSchaedler/dragonrubyautocomplete/releases
+
 ## Features
 
 `def tick args`  
