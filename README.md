@@ -9,8 +9,8 @@ https://github.com/DSchaedler/dragonrubyautocomplete/releases
 `def tick args`  
 `args.outputs.labels`  
 `args.outputs.sprites`  
-`args.outputs.sounds`
-`args.gtk.queue_sound`
+`args.outputs.sounds`  
+`args.gtk.queue_sound`  
 `args.state.var`  
 `args.inputs.mouse.click.point.x`  
 `args.inputs.mouse.click.point.y`  
