@@ -4,7 +4,8 @@ Visual Studio extension containing snippets to streamline DragonRuby Development
 
 [Packaged Releases](https://github.com/DSchaedler/dragonrubyautocomplete/releases)
 
-Update your snippets directly:   [snippets.json](https://github.com/DSchaedler/dragonrubyautocomplete/blob/main/snippets.json)
+Update your snippets directly:  
+[snippets.json](https://github.com/DSchaedler/dragonrubyautocomplete/blob/main/snippets.json)
 
 ## Features
 
