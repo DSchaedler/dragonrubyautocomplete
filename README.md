@@ -40,6 +40,6 @@ The current main file is here: https://github.com/DSchaedler/dragonrubyautocompl
 
 Please do not contribute any unlicensed code or full samples to this project.
 
-Useful Links
+Useful Links:  
 [Testing Extensions](https://code.visualstudio.com/api/working-with-extensions/testing-extension)  
 [Creting Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets)  
