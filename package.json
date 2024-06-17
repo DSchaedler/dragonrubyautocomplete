@@ -2,7 +2,7 @@
 	"name": "dragonrubyautocomplete",
 	"displayName": "DragonRubyAutocomplete",
 	"description": "",
-	"version": "v0.0.4-dev",
+	"version": "v0.0.5-dev",
 	"engines": {
 		"vscode": "^1.90.0"
 	},

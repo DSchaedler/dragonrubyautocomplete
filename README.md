@@ -6,6 +6,7 @@ Visual Studio extension to streamline DragonRuby Development.
 
 ## Release Notes
 
+* [v0.0.5-dev] Consolidate mouse inputs. Finish controller and copy through controller four.
 * [v0.0.4-dev] Add Mouse, Touch, some controller inputs. Improve namespacing. Fix wildcards.
 * [v0.0.3-dev] Rebuilt the thing to work. Added a bunch more snippets.
 * [v0.0.2-dev] Snippets for Sounds. Link to Documentation.
