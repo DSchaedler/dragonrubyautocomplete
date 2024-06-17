@@ -4,11 +4,6 @@
 		"body":[ "args.gtk.queue_sound '${1:ogg_path}'" ],
 		"description": "Play Sound"	},
 
-	"gtk.reset": {
-		"prefix": "args.gtk.reset",
-		"body": [ "args.gtk.reset" ],
-		"description": "Reset Game State" },
-
 	"gtk.get_pixels": {
 		"prefix": "args.gtk.get_pixels",
 		"body": [ "args.gtk.get_pixels \"${1:PATH}\"" ],
@@ -107,5 +102,162 @@
 	"gtk.create_uuid": {
 		"prefix": "args.gtk.create_uuid",
 		"body": [ "args.gtk.create_uuid" ],
-		"description": "String. NOT SECURE" }
+		"description": "String. NOT SECURE" },
+
+	"gtk.list_files": {
+		"prefix": "args.gtk.list_files",
+		"body": [ "args.gtk.list_files ${1:PATH}" ],
+		"description": "Sandboxed. List files in Game Root." },
+	
+	"gtk.stat_file": {
+		"prefix": "args.gtk.stat_file",
+		"body": [ "args.gtk.stat_file ${1:PATH}" ],
+		"description": "Sanboxed. Returns Hash with file Metadata." },
+	
+	"gtk.read_file": {
+		"prefix": "args.gtk.read_file",
+		"body": [ "args.gtk.read_file ${1:PATH}" ],
+		"description": "Sandboxed. Returns String of file contents." },
+	
+	"gtk.write_file": {
+		"prefix": "args.gtk.write_file",
+		"body": [ "args.gtk.write_file ${1:PATH} ${2:STRING}" ],
+		"description": "Sandboxed. Overwrite PATH with STRING." },
+	
+	"gtk.append_file": {
+		"prefix": "args.gtk.append_file",
+		"body": [ "args.gtk.append_file ${1:PATH} ${2:STRING}" ],
+		"description": "Sandboxed. Append STRING to PATH." },
+	
+	"gtk.delete_file": {
+		"prefix": "args.gtk.delete_file",
+		"body": [ "args.gtk.delete_file {1:PATH}" ],
+		"description": "Sandboxed." },
+	
+	"gtk.parse_json": {
+		"prefix": "args.gtk.parse_json",
+		"body": [ "args.gtk.parse_json ${1:STRING}" ],
+		"description": "Hash" },
+	
+	"gtk.parse_json_file": {
+		"prefix": "args.gtk.parse_json_file",
+		"body": [ "args.gtk.parse_json_file ${1:PATH}" ],
+		"description": "Hash" },
+	
+	"gtk.parse_xml": {
+		"prefix": "args.gtk.parse_xml",
+		"body": [ "args.gtk.parse_xml #{1:STRING}" ],
+		"description": "Hash" },
+	
+	"gtk.parse_xml_file": {
+		"prefix": "args.gtk.parse_xml_file",
+		"body": [ "args.gtk.parse_xml_file ${1:PATH}" ],
+		"description": "Hash" },
+	
+	"gtk.http_get": {
+		"prefix": "args.gtk.http_get",
+		"body": [ "args.gtk.http_get ${1:URI}" ],
+		"description": "HTTP Response Object" },
+	
+	"gtk.http_post": {
+		"prefix": "args.gtk.http_post",
+		"body": [ "args.gtk.http_post ${1:URI}, #{2:FIELDS_HASH}, ${3:HEADERS}" ],
+		"description": "HTTP Response Object" },
+	
+	"gtk.http_post_body": {
+		"prefix": "args.gtk.http_post_body",
+		"body": [ "args.gtk.http_post_body ${1:URI}, ${2:STRING}, ${3:HEADERS}" ],
+		"description": "HTTP Response Object" },
+	
+	"gtk.start_server!": {
+		"prefix": "args.gtk.start_server!",
+		"body": [ "args.gtk.start_server! port: 9001, enable_in_prod: true" ],
+		"description": "" },
+	
+	"inputs.http_requests": {
+		"prefix": "args.inputs.http_requests",
+		"body": [ "args.inputs.http_requests" ],
+		"description": "Array of pending HTTP Requests" },
+
+	"request.respond": {
+		"prefix": ".respond",
+		"body": [ ".respond ${1:HTTP_CODE}, ${2:HTTP_RESPONSE}" ],
+		"description": "Respond to HTTP Requests" },
+	
+	"gtk.version": {
+		"prefix": "args.gtk.version",
+		"body": [ "args.gtk.version" ],
+		"description": "String" },
+	
+	"gtk.version_pro?": {
+		"prefix": "args.gtk.version_pro?",
+		"body": [ "args.gtk.version_pro?" ],
+		"description": "Boolean" },
+	
+	"gtk.game_version": {
+		"prefix": "args.gtk.game_version",
+		"body": [ "args.gtk.game_version" ],
+		"description": "String" },
+
+	"gtk.reset": {
+		"prefix": "args.gtk.reset",
+		"body": [ "args.gtk.reset seed: ${1:OPTIONAL}" ],
+		"description": "Reset Game State" },
+
+	"gtk.seed": {
+		"prefix": "args.gtk.seed",
+		"body": [ "args.gtk.seed" ],
+		"description": "Current RNG Seed" },
+	
+	"gtk.started_at": {
+		"prefix": "args.gtk.started_at",
+		"body": [ "args.gtk.started_at" ],
+		"description": "Original RNG Seed" },
+	
+	"gtk.reset_next_tick": {
+		"prefix": "args.gtk.reset_next_tick",
+		"body": [ "args.gtk.reset_next_tick" ],
+		"description": "" },
+	
+	"gtk.reset_sprite": {
+		"prefix": "args.gtk.reset_sprite",
+		"body": [ "args.gtk.reset_sprite ${1:PATH}" ],
+		"description": "Invalidate Sprite / Render Target Cache" },
+	
+	"gtk.reset_sprites": {
+		"prefix": "args.gtk.reset_sprites",
+		"body": [ "args.gtk.reset_sprites" ],
+		"description": "Invalidate all Sprite / Render Target Caches" },
+	
+	"gtk.calcspritebox": {
+		"prefix": "args.gtk.calcspritebox",
+		"body": [ "args.gtk.calcspritebox ${1:PATH}" ],
+		"description": "[w, h]" },
+	
+	"gtk.current_framrate": {
+		"prefix": "args.gtk.current_framerate",
+		"body": [ "args.gtk.current_framerate" ],
+		"description": "Float" },
+	
+	"gtk.framerate_diagnostic_primitives": {
+		"prefix": "args.gtk.framerate_diagnostic_primitives",
+		"body": [ "args.gtk.framerate_diagnostic_primitives" ],
+		"description": "Array" },
+	
+	"gtk.warn_array_primitives!": {
+		"prefix": "args.gtk.warn_array_primitives!",
+		"body": [ "args.gtk.warn_array_primitives!" ],
+		"description": "Enable console warnings for Array Primitives" },
+	
+	"gtk.benchmark": {
+		"prefix": "args.gtk.benchmark",
+		"body": [ "args.gtk.benchmark ${1:iterations/seconds}: ${2:LAMBDAS}" ],
+		"description": "Compare the performance of a collection of methods" },
+	
+	"gtk.notify!": {
+		"prefix": "args.gtk.notify!",
+		"body": [ "args.gtk.notify! " ],
+		"description": "" }
+	
+	
 }
