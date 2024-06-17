@@ -1,0 +1,51 @@
+{
+	"def tick args": {
+		"prefix": "def tick args",
+		"body": [
+			"DragonRuby is built on mruby, not C Ruby: https://mruby.org/docs/api/",
+			"Please read the engine documentation: https://docs.dragonruby.org/#/",
+			"",
+			"def tick args",
+			"  $0",
+			"end"
+		],
+		"description": "Code Block: Main Tick Loop"
+	},
+
+	"args.outputs.sounds": {
+		"prefix": "args.outputs.sounds",
+		"body":[
+			"args.outputs.sounds << '${1:wav_or_ogg_path}'"
+		],
+		"description": "Play Sound"
+	},
+
+	"args.gtk.queue_sound": {
+		"prefix": "args.gtk.queue_sound",
+		"body":[
+			"args.gtk.queue_sound '${1:ogg_path}'"
+		],
+		"description": "Play Sound"
+	},
+
+	"Pause when Unfocused": {
+		"prefix": "if (!args.inputs.keyboard.has_focus",
+		"body": [
+		"# if the keyboard doesn't have focus, and the game is in production mode, and it isn't the first tick",
+  	"if (!args.inputs.keyboard.has_focus &&",
+    "    args.gtk.production &&",
+    "    args.state.tick_count != 0)",
+    "  args.outputs.background_color = [0, 0, 0]",
+    "  args.outputs.labels << { x: 640,",
+    "                           y: 360,",
+    "                           text: 'Game Paused (click to resume).',",
+    "                           alignment_enum: 1,",
+    "                           r: 255, g: 255, b: 255 }",
+    "  # consider setting all audio volume to 0.0",
+    "else",
+    "  # perform your regular tick function",
+    "end"
+		],
+		"description": "Code Block: Pause application when focus lost."
+	}
+}

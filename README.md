@@ -1,32 +1,13 @@
 # dragonrubyautocomplete README
 
-Visual Studio extension containing snippets to streamline DragonRuby Development
+Visual Studio extension to streamline DragonRuby Development.
 
 [Packaged Releases](https://github.com/DSchaedler/dragonrubyautocomplete/releases)
 
-Update your snippets directly:  
-[snippets.json](https://github.com/DSchaedler/dragonrubyautocomplete/blob/main/snippets.json)
-
-## Features
-
-### API Calls
-
-`def tick args`  
-`args.outputs.labels`  
-`args.outputs.sprites`  
-`args.outputs.sounds`  
-`args.gtk.queue_sound`  
-`args.state.var`  
-`args.inputs.mouse.click.point.x`  
-`args.inputs.mouse.click.point.y`  
-
-### Code Blocks
-
-* [Pause when Unfocused](https://docs.dragonruby.org/#/guides/deploying-to-itch?id=consider-adding-pause-when-game-is-in-background)  
-
 ## Release Notes
 
-* [v0.0.2-dev] Support for Sounds. Link to Documentation.
+* [v0.0.3-dev] Rebuilt the thing to work. Added a bunch more snippets.
+* [v0.0.2-dev] Snippets for Sounds. Link to Documentation.
 * [v0.0.1-dev] Inital Commit
 
 ## Contributing
@@ -39,8 +20,6 @@ This extension was creatied using the following tutorial: https://code.visualstu
 4. Install Yeoman and the Visual Studio Code Generator  
    a. `npm install --global yo generator-code`  
 5. Clone this repository as a project
-
-The current main file is here: https://github.com/DSchaedler/dragonrubyautocomplete/blob/main/snippets.json
 
 Please do not contribute any unlicensed code or full samples to this project.
 

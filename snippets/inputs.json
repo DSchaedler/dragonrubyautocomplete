@@ -1,0 +1,137 @@
+{
+	"last_active": {
+			"prefix": "args.inputs.last_active",
+			"body": [
+					"args.inputs.last_active"
+			],
+			"description": "Symbol"
+	},
+
+	"last_active_at": {
+			"prefix": "args.inputs.last_active_at",
+			"body": [
+					"args.inputs.last_active_at $1{:device}"
+			],
+			"description": "Integer"
+	},
+
+	"last_active_global_at": {
+			"prefix": "args.inputs.last_active_global_at",
+			"body": [
+					"args.inputs.last_active_global_at $1{:device}"
+			],
+			"description": "Integer"
+	},
+
+	"locale": {
+			"prefix": "args.inputs.locale",
+			"body": [
+					"args.inputs.locale"
+			],
+			"description": "String"
+	},
+
+	"locale_raw": {
+			"prefix": "args.inputs.locale_raw",
+			"body": [
+					"args.inputs.locale_raw"
+			],
+			"description": "String"
+	},
+
+	"up": {
+			"prefix": "args.inputs.up",
+			"body": [
+					"args.inputs.up"
+			],
+			"description": "Boolean"
+	},
+
+	"down": {
+			"prefix": "args.inputs.down",
+			"body": [
+					"args.inputs.down"
+			],
+			"description": "Boolean"
+	},
+
+	"left": {
+			"prefix": "args.inputs.left",
+			"body": [
+					"args.inputs.left"
+			],
+			"description": "Boolean"
+	},
+
+	"right": {
+			"prefix": "args.inputs.right",
+			"body": [
+					"args.inputs.right"
+			],
+			"description": "Boolean"
+	},
+
+	"left_right": {
+			"prefix": "args.inputs.left_right",
+			"body": [
+					"args.inputs.left_right"
+			],
+			"description": "Signed Integer"
+	},
+
+	"left_right_perc": {
+			"prefix": "args.inputs.left_right_perc",
+			"body": [
+					"args.inputs.left_right_perc"
+			],
+			"description": "Float"
+	},
+
+	"left_right_directional": {
+			"prefix": "args.inputs.left_right_directional",
+			"body": [
+					"args.inputs.left_right_directional"
+			],
+			"description": "Signed Integer"
+	},
+
+	"left_right_directional_perc": {
+			"prefix": "args.inputs.left_right_directional_perc",
+			"body": [
+					"args.inputs.left_right_directional_perc"
+			],
+			"description": "Float"
+	},
+
+	"up_down": {
+			"prefix": "args.inputs.up_down",
+			"body": [
+					"args.inputs.up_down"
+			],
+			"description": "Signed Integer"
+	},
+
+	"up_down_directional": {
+			"prefix": "args.inputs.up_down_directional",
+			"body": [
+					"args.inputs.up_down_directional"
+			],
+			"description": "Signed Integer"
+	},
+
+	"up_down_perc": {
+			"prefix": "args.inputs.up_down_perc",
+			"body": [
+					"args.inputs.up_down_perc"
+			],
+			"description": "Float"
+	},
+
+	"text": {
+			"prefix": "args.inputs.text",
+			"body": [
+					"args.inputs.text"
+			],
+			"description": "Character"
+	}
+}

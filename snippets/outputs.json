@@ -1,0 +1,57 @@
+{
+	"args.outputs.solids": {
+			"prefix": "args.outputs.solids",
+			"body": [
+					"args.outputs.solids << { x: $1, y: $2, w: $3, h: $4 }"
+			],
+			"description": "Rectangle"
+	},
+
+	"args.outputs.sprites": {
+		"prefix": "args.outputs.sprites",
+		"body": [
+		"args.outputs.sprites << << { x: $1, y: $2, w: $3, h: $4, path: \"$5\" }"
+		],
+		"description": "Sprite"
+	},
+	
+	"args.outputs.labels": {
+		"prefix": "args.otuputs.labels",
+		"body": [
+			"args.ouputs.labels << { x: $1, y: $2, text: \"$3\" }"
+		],
+		"description": "Text"
+	},
+
+	"args.outputs.borders": {
+			"prefix": "args.outputs.borders",
+			"body": [
+					" args.outputs.borders << { x: $1, y: $2, w: $3, h: $4 }"
+			],
+			"description": "Box"
+	},
+
+	"args.outputs.lines": {
+			"prefix": "args.outputs.lines",
+			"body": [
+					"args.outputs.lines << { x: $1, y: $2, x2: $3, y2: $4 }"
+			],
+			"description": "Line"
+	},
+
+	"args.outputs.primitives": {
+			"prefix": "args.outputs.primitives",
+			"body": [
+					"args.outputs.primitives << { x: $1, y: $2, w: $3, h: $4, primitive_marker: :$5 }"
+			],
+			"description": "Render Primitive"
+	},
+
+	"args.outputs.debug": {
+		"prefix": "args.outputs.debug",
+		"body": [
+				"args.outputs.debug << { x: $1, y: $2, w: $3, h: $4, primitive_marker: :$5 }"
+		],
+		"description": "Debug Primitive"
+}
+}

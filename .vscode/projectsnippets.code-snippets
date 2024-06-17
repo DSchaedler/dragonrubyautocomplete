@@ -17,11 +17,9 @@
 	// }
 
 	"snippettemplate": {
-		"scope": "javascript,typescript,node,json",
 		"prefix": "snip",
 		"body": [
 			"\"$1\": {",
-            "    \"scope\": \"$2\",",
             "    \"prefix\": \"$3\",",
             "    \"body\": [",
             "        \"$4\"",
