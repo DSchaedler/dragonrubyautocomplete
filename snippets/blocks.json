@@ -2,8 +2,8 @@
 	"def tick args": {
 		"prefix": "def tick args",
 		"body": [
-			"DragonRuby is built on mruby, not C Ruby: https://mruby.org/docs/api/",
-			"Please read the engine documentation: https://docs.dragonruby.org/#/",
+			"# DragonRuby is built on mruby, not C Ruby: https://mruby.org/docs/api/",
+			"# Please read the engine documentation: https://docs.dragonruby.org/#/",
 			"",
 			"def tick args",
 			"  $0",
