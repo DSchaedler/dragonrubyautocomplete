@@ -2,5 +2,95 @@
 	"keyboard.active": {
 		"prefix": "args.inputs.keyboard.active",
 		"body": [ "args.inputs.keyboard.active" ],
-		"description": "Integer" }
+		"description": "Integer" },
+
+		"keyboard.has_focus": {
+			"prefix": "args.inputs.keyboard.has_focus",
+			"body": [ "args.inputs.keyboard.has_focus" ],
+			"description": "Boolean" },
+	
+		"keyboard.up": {
+			"prefix": "args.inputs.keyboard.up",
+			"body": [ "args.inputs.keyboard.up" ],
+			"description": "Boolean" },
+		
+		"keyboard.down": {
+			"prefix": "args.inputs.keyboard.down",
+			"body": [ "args.inputs.keyboard.down" ],
+			"description": "Boolean" },
+		
+		"keyboard.left": {
+			"prefix": "args.inputs.keyboard.left",
+			"body": [ "args.inputs.keyboard.left" ],
+			"description": "Boolean" },
+		
+		"keyboard.right": {
+			"prefix": "args.inputs.keyboard.right",
+			"body": [ "args.inputs.keyboard.right" ],
+			"description": "Boolean" },
+		
+		"keyboard.left_right": {
+			"prefix": "args.inputs.keyboard.left_right",
+			"body": [ "args.inputs.keyboard.left_right" ],
+			"description": "Signed Integer" },
+		
+		"keyboard.up_down": {
+			"prefix": "args.inputs.keyboard.up_down",
+			"body": [ "args.inputs.keyboard.up_down" ],
+			"description": "Signed Integer" },
+		
+		"keyboard.key_down": {
+			"prefix": "args.inputs.keyboard.key_down",
+			"body": [ "args.inputs.keyboard.key_down.${1:KEY}" ],
+			"description": "Boolean" },
+		
+		"keyboard.key_held": {
+			"prefix": "args.inputs.keyboard.key_held",
+			"body": [ "args.inputs.keyboard.key_held.${1:KEY}" ],
+			"description": "Boolean" },
+		
+		"keyboard.key_up": {
+			"prefix": "args.inputs.keyboard.key_up",
+			"body": [ "args.inputs.keyboard.key_up.${1:KEY}" ],
+			"description": "Boolean" },
+		
+		"keyboard.truthy_keys": {
+			"prefix": "args.inputs.keyboard.truthy_keys",
+			"body": [ "args.inputs.keyboard.truthy_keys" ],
+			"description": "Array" },
+			
+		"keyboard.key_down.keycodes": {
+			"prefix": "args.inputs.keyboard.key_down.keycodes",
+			"body": [ "args.inputs.keyboard.key_down.keycodes.${1:KEYCODE}" ],
+			"description": "Boolean" },
+		
+		"keyboard.key_held.keycodes": {
+			"prefix": "args.inputs.keyboard.key_held.keycodes",
+			"body": [ "args.inputs.keyboard.key_held.keycodes.${1:KEYCODE}" ],
+			"description": "Boolean" },
+		
+		"keyboard.key_up.keycodes": {
+			"prefix": "args.inputs.keyboard.key_up.keycodes",
+			"body": [ "args.inputs.keyboard.key_up.keycodes.${1:KEYCODE}" ],
+			"description": "Boolean" },
+
+		"keyboard.key_down.char": {
+			"prefix": "args.inputs.keyboard.key_down.char",
+			"body": [ "args.inputs.keyboard.key_down.char" ],
+			"description": "String" },
+		
+		"keyboard.key_held.char": {
+			"prefix": "args.inputs.keyboard.key_held.char",
+			"body": [ "args.inputs.keyboard.key_held.char" ],
+			"description": "String" },
+		
+		"keyboard.key_up.char": {
+			"prefix": "args.inputs.keyboard.key_up.char",
+			"body": [ "args.inputs.keyboard.key_up.char" ],
+			"description": "String" },
+
+		"keyboard.keys": {
+			"prefix": "args.inputs.keyboard.keys",
+			"body": [ "args.inputs.keyboard.keys" ],
+			"description": "Hash" }		
 }
