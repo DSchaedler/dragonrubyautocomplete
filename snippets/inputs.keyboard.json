@@ -1,0 +1,6 @@
+{
+	"keyboard.active": {
+		"prefix": "args.inputs.keyboard.active",
+		"body": [ "args.inputs.keyboard.active" ],
+		"description": "Integer" }
+}

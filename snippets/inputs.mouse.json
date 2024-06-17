@@ -1,249 +1,156 @@
 {
 	"mouse.has_focus": {
-			"prefix": "args.inputs.mouse.has_focus",
-			"body": [
-					"args.inputs.mouse.has_focus"
-			],
-			"description": "Boolean"
-	},
+		"prefix": "args.inputs.mouse.has_focus",
+		"body": [ "args.inputs.mouse.has_focus" ],
+		"description": "Boolean" },
 
 	"mouse.x": {
-			"prefix": "args.inputs.mouse.x",
-			"body": [
-					"args.inputs.mouse.x"
-			],
-			"description": "Float"
-	},
+		"prefix": "args.inputs.mouse.x",
+		"body": [ "args.inputs.mouse.x" ],
+		"description": "Float" },
 
 	"mouse.y": {
-			"prefix": "args.inputs.mouse.y",
-			"body": [
-					"args.inputs.mouse.y"
-			],
-			"description": "Float"
-	},
+		"prefix": "args.inputs.mouse.y",
+		"body": [ "args.inputs.mouse.y" ],
+		"description": "Float" },
 
 	"mouse.previous_x": {
-			"prefix": "args.inputs.mouse.previous_x",
-			"body": [
-					"args.inputs.mouse.previous_x"
-			],
-			"description": "Float"
-	},
+		"prefix": "args.inputs.mouse.previous_x",
+		"body": [ "args.inputs.mouse.previous_x" ],
+		"description": "Float" },
 
 	"mouse.previous_y": {
-			"prefix": "args.inputs.mouse.previous_y",
-			"body": [
-					"args.inputs.mouse.previous_y"
-			],
-			"description": "Float"
-	},
+		"prefix": "args.inputs.mouse.previous_y",
+		"body": [ "args.inputs.mouse.previous_y" ],
+		"description": "Float" },
 
 	"mouse.relative_x": {
-			"prefix": "args.inputs.mouse.relative_x",
-			"body": [
-					"args.inputs.mouse.relative_x"
-			],
-			"description": "Float"
-	},
+		"prefix": "args.inputs.mouse.relative_x",
+		"body": [ "args.inputs.mouse.relative_x" ],
+		"description": "Float" },
 
 	"mouse.relative_y": {
-			"prefix": "args.inputs.mouse.relative_y",
-			"body": [
-					"args.inputs.mouse.relative_y"
-			],
-			"description": "Float"
-	},
+		"prefix": "args.inputs.mouse.relative_y",
+		"body": [ "args.inputs.mouse.relative_y" ],
+		"description": "Float" },
 
 	"mouse.inside_rect?": {
-			"prefix": "args.inputs.mouse.inside_rect? rect",
-			"body": [
-					"args.inputs.mouse.inside_rect? ${1:rect}"
-			],
-			"description": "Boolean"
-	},
+		"prefix": "args.inputs.mouse.inside_rect? rect",
+		"body": [ "args.inputs.mouse.inside_rect? ${1:rect}" ],
+		"description": "Boolean" },
 
 	"mouse.inside_circle?": {
-			"prefix": "args.inputs.mouse.inside_circle? center_point, radius",
-			"body": [
-					"args.inputs.mouse.inside_circle? ${1:center_point}, ${2:radius}"
-			],
-			"description": "Boolean"
-	},
+		"prefix": "args.inputs.mouse.inside_circle? center_point, radius",
+		"body": [ "args.inputs.mouse.inside_circle? ${1:center_point}, ${2:radius}" ],
+		"description": "Boolean" },
 
 	"mouse.moved": {
-			"prefix": "args.inputs.mouse.moved",
-			"body": [
-					"args.inputs.mouse.moved"
-			],
-			"description": "Boolean"
-	},
+		"prefix": "args.inputs.mouse.moved",
+		"body": [ "args.inputs.mouse.moved" ],
+		"description": "Boolean" },
 
 	"mouse.button_left": {
-			"prefix": "args.inputs.mouse.button_left",
-			"body": [
-					"args.inputs.mouse.button_left"
-			],
-			"description": "Boolean"
-	},
+		"prefix": "args.inputs.mouse.button_left",
+		"body": [ "args.inputs.mouse.button_left" ],
+		"description": "Boolean" },
 
 	"mouse.button_middle": {
-			"prefix": "args.inputs.mouse.button_middle",
-			"body": [
-					"args.inputs.mouse.button_middle"
-			],
-			"description": "Boolean"
-	},
+		"prefix": "args.inputs.mouse.button_middle",
+		"body": [ "args.inputs.mouse.button_middle" ],
+		"description": "Boolean" },
 
 	"mouse.button_right": {
-			"prefix": "args.inputs.mouse.button_right",
-			"body": [
-					"args.inputs.mouse.button_right"
-			],
-			"description": "Boolean"
-	},
+		"prefix": "args.inputs.mouse.button_right",
+		"body": [ "args.inputs.mouse.button_right" ],
+		"description": "Boolean" },
 
 	"mouse.button_bits": {
-			"prefix": "args.inputs.mouse.button_bits",
-			"body": [
-					"args.inputs.mouse.button_bits"
-			],
-			"description": ""
-	},
+		"prefix": "args.inputs.mouse.button_bits",
+		"body": [ "args.inputs.mouse.button_bits" ],
+		"description": "" },
 
 	"mouse.wheel": {
-			"prefix": "args.inputs.mouse.button_wheel",
-			"body": [
-					"args.inputs.mouse.button_wheel"
-			],
-			"description": "{x:, y:}"
-	},
+		"prefix": "args.inputs.mouse.button_wheel",
+		"body": [ "args.inputs.mouse.button_wheel" ],
+		"description": "{x:, y:}" },
 
 	"click.button_left": {
-			"prefix": "args.inputs.mouse.click.button_left",
-			"body": [
-					"args.inputs.mouse.click.button_left"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.click.button_left",
+		"body": [ "args.inputs.mouse.click.button_left" ],
+		"description": "Click Entity" },
 
 	"click.button_right": {
-			"prefix": "args.inputs.mouse.click.button_right",
-			"body": [
-					"args.inputs.mouse.click.button_right"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.click.button_right",
+		"body": [ "args.inputs.mouse.click.button_right" ],
+		"description": "Click Entity" },
 
 	"click.button_middle": {
-			"prefix": "args.inputs.mouse.click.button_middle",
-			"body": [
-					"args.inputs.mouse.click.button_middle"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.click.button_middle",
+		"body": [ "args.inputs.mouse.click.button_middle" ],
+		"description": "Click Entity" },
 
 	"click.button_bits": {
-			"prefix": "args.inputs.mouse.click.button_bits",
-			"body": [
-					"args.inputs.mouse.click.button_bits"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.click.button_bits",
+		"body": [ "args.inputs.mouse.click.button_bits" ],
+		"description": "Click Entity" },
 
 	"down.button_left": {
-			"prefix": "args.inputs.mouse.down.button_left",
-			"body": [
-					"args.inputs.mouse.down.button_left"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.down.button_left",
+		"body": [ "args.inputs.mouse.down.button_left" ],
+		"description": "Click Entity" },
 
 	"down.button_right": {
-			"prefix": "args.inputs.mouse.down.button_right",
-			"body": [
-					"args.inputs.mouse.down.button_right"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.down.button_right",
+		"body": [ "args.inputs.mouse.down.button_right" ],
+		"description": "Click Entity" },
 
 	"down.button_middle": {
-			"prefix": "args.inputs.mouse.down.button_middle",
-			"body": [
-					"args.inputs.mouse.down.button_middle"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.down.button_middle",
+		"body": [ "args.inputs.mouse.down.button_middle" ],
+		"description": "Click Entity" },
 
 	"down.button_bits": {
-			"prefix": "args.inputs.mouse.down.button_bits",
-			"body": [
-					"args.inputs.mouse.down.button_bits"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.down.button_bits",
+		"body": [ "args.inputs.mouse.down.button_bits" ],
+		"description": "Click Entity" },
 
 	"previous_click.button_left": {
-			"prefix": "args.inputs.mouse.previous_click.button_left",
-			"body": [
-					"args.inputs.mouse.previous_click.button_left"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.previous_click.button_left",
+		"body": [ "args.inputs.mouse.previous_click.button_left" ],
+		"description": "Click Entity" },
 
 	"previous_click.button_right": {
-			"prefix": "args.inputs.mouse.previous_click.button_right",
-			"body": [
-					"args.inputs.mouse.previous_click.button_right"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.previous_click.button_right",
+		"body": [ "args.inputs.mouse.previous_click.button_right" ],
+		"description": "Click Entity" },
 
 	"previous_click.button_middle": {
-			"prefix": "args.inputs.mouse.previous_click.button_middle",
-			"body": [
-					"args.inputs.mouse.previous_click.button_middle"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.previous_click.button_middle",
+		"body": [ "args.inputs.mouse.previous_click.button_middle" ],
+		"description": "Click Entity" },
 
 	"previous_click.button_bits": {
-			"prefix": "args.inputs.mouse.previous_click.button_bits",
-			"body": [
-					"args.inputs.mouse.previous_click.button_bits"
-			],
-			"description": "Click Entity"
-	},
+		"prefix": "args.inputs.mouse.previous_click.button_bits",
+		"body": [ "args.inputs.mouse.previous_click.button_bits" ],
+		"description": "Click Entity" },
 
 	"up.button_left": {
-			"prefix": "args.inputs.mouse.up.button_left",
-			"body": [
-					"args.inputs.mouse.up.button_left"
-			],
-			"description": "up Entity"
-	},
+		"prefix": "args.inputs.mouse.up.button_left",
+		"body": [ "args.inputs.mouse.up.button_left" ],
+		"description": "up Entity" },
 
 	"up.button_right": {
-			"prefix": "args.inputs.mouse.up.button_right",
-			"body": [
-					"args.inputs.mouse.up.button_right"
-			],
-			"description": "up Entity"
-	},
+		"prefix": "args.inputs.mouse.up.button_right",
+		"body": [ "args.inputs.mouse.up.button_right" ],
+		"description": "up Entity" },
 
 	"up.button_middle": {
-			"prefix": "args.inputs.mouse.up.button_middle",
-			"body": [
-					"args.inputs.mouse.up.button_middle"
-			],
-			"description": "up Entity"
-	},
+		"prefix": "args.inputs.mouse.up.button_middle",
+		"body": [ "args.inputs.mouse.up.button_middle" ],
+		"description": "up Entity" },
 
 	"up.button_bits": {
-			"prefix": "args.inputs.mouse.up.button_bits",
-			"body": [
-					"args.inputs.mouse.up.button_bits"
-			],
-			"description": "up Entity"
-	}
+		"prefix": "args.inputs.mouse.up.button_bits",
+		"body": [ "args.inputs.mouse.up.button_bits" ],
+		"description": "up Entity" }
 }
