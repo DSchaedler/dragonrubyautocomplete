@@ -1,0 +1,33 @@
+{
+	"up.button_left": {
+			"prefix": "args.inputs.mouse.up.button_left",
+			"body": [
+					"args.inputs.mouse.up.button_left"
+			],
+			"description": "up Entity"
+	},
+
+	"up.button_right": {
+			"prefix": "args.inputs.mouse.up.button_right",
+			"body": [
+					"args.inputs.mouse.up.button_right"
+			],
+			"description": "up Entity"
+	},
+
+	"up.button_middle": {
+			"prefix": "args.inputs.mouse.up.button_middle",
+			"body": [
+					"args.inputs.mouse.up.button_middle"
+			],
+			"description": "up Entity"
+	},
+
+	"up.button_bits": {
+			"prefix": "args.inputs.mouse.up.button_bits",
+			"body": [
+					"args.inputs.mouse.up.button_bits"
+			],
+			"description": "up Entity"
+	}
+}

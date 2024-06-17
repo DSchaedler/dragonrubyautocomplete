@@ -1,0 +1,121 @@
+{
+	"mouse.has_focus": {
+			"prefix": "args.inputs.mouse.has_focus",
+			"body": [
+					"args.inputs.mouse.has_focus"
+			],
+			"description": "Boolean"
+	},
+
+	"mouse.x": {
+			"prefix": "args.inputs.mouse.x",
+			"body": [
+					"args.inputs.mouse.x"
+			],
+			"description": "Float"
+	},
+
+	"mouse.y": {
+			"prefix": "args.inputs.mouse.y",
+			"body": [
+					"args.inputs.mouse.y"
+			],
+			"description": "Float"
+	},
+
+	"mouse.previous_x": {
+			"prefix": "args.inputs.mouse.previous_x",
+			"body": [
+					"args.inputs.mouse.previous_x"
+			],
+			"description": "Float"
+	},
+
+	"mouse.previous_y": {
+			"prefix": "args.inputs.mouse.previous_y",
+			"body": [
+					"args.inputs.mouse.previous_y"
+			],
+			"description": "Float"
+	},
+
+	"mouse.relative_x": {
+			"prefix": "args.inputs.mouse.relative_x",
+			"body": [
+					"args.inputs.mouse.relative_x"
+			],
+			"description": "Float"
+	},
+
+	"mouse.relative_y": {
+			"prefix": "args.inputs.mouse.relative_y",
+			"body": [
+					"args.inputs.mouse.relative_y"
+			],
+			"description": "Float"
+	},
+
+	"mouse.inside_rect?": {
+			"prefix": "args.inputs.mouse.inside_rect? rect",
+			"body": [
+					"args.inputs.mouse.inside_rect? ${1:rect}"
+			],
+			"description": "Boolean"
+	},
+
+	"mouse.inside_circle?": {
+			"prefix": "args.inputs.mouse.inside_circle? center_point, radius",
+			"body": [
+					"args.inputs.mouse.inside_circle? ${1:center_point}, ${2:radius}"
+			],
+			"description": "Boolean"
+	},
+
+	"mouse.moved": {
+			"prefix": "args.inputs.mouse.moved",
+			"body": [
+					"args.inputs.mouse.moved"
+			],
+			"description": "Boolean"
+	},
+
+	"mouse.button_left": {
+			"prefix": "args.inputs.mouse.button_left",
+			"body": [
+					"args.inputs.mouse.button_left"
+			],
+			"description": "Boolean"
+	},
+
+	"mouse.button_middle": {
+			"prefix": "args.inputs.mouse.button_middle",
+			"body": [
+					"args.inputs.mouse.button_middle"
+			],
+			"description": "Boolean"
+	},
+
+	"mouse.button_right": {
+			"prefix": "args.inputs.mouse.button_right",
+			"body": [
+					"args.inputs.mouse.button_right"
+			],
+			"description": "Boolean"
+	},
+
+	"mouse.button_bits": {
+			"prefix": "args.inputs.mouse.button_bits",
+			"body": [
+					"args.inputs.mouse.button_bits"
+			],
+			"description": ""
+	},
+
+	"mouse.wheel": {
+			"prefix": "args.inputs.mouse.button_wheel",
+			"body": [
+					"args.inputs.mouse.button_wheel"
+			],
+			"description": "{x:, y:}"
+	}
+}

@@ -2,7 +2,7 @@
 	"name": "dragonrubyautocomplete",
 	"displayName": "DragonRubyAutocomplete",
 	"description": "",
-	"version": "v0.0.3-dev",
+	"version": "v0.0.4-dev",
 	"engines": {
 		"vscode": "^1.90.0"
 	},
@@ -22,6 +22,34 @@
 			{
 				"language": "ruby",
 				"path": "./snippets/inputs.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/inputs.mouse.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/inputs.controller_one.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/inputs.mouse.click.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/inputs.mouse.down.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/inputs.mouse.previous_click.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/inputs.mouse.up.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/inputs.touch.json"
 			}
 		]
 	}

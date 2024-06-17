@@ -1,0 +1,25 @@
+{
+	"inputs.touch": {
+			"prefix": "args.inputs.touch",
+			"body": [
+					"args.inputs.touch"
+			],
+			"description": ""
+	},
+
+	"inputs.finger_left": {
+			"prefix": "args.inputs.finger_left",
+			"body": [
+					"args.inputs.finger_left"
+			],
+			"description": "{x:,y:}"
+	},
+
+	"inputs.finger_right": {
+			"prefix": "args.inputs.finger_right",
+			"body": [
+					"args.inputs.finger_right"
+			],
+			"description": "{x:, y:}"
+	}
+}

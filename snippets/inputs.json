@@ -1,5 +1,5 @@
 {
-	"last_active": {
+	"inputs.last_active": {
 			"prefix": "args.inputs.last_active",
 			"body": [
 					"args.inputs.last_active"
@@ -7,23 +7,23 @@
 			"description": "Symbol"
 	},
 
-	"last_active_at": {
+	"inputs.last_active_at": {
 			"prefix": "args.inputs.last_active_at",
 			"body": [
-					"args.inputs.last_active_at $1{:device}"
+					"args.inputs.last_active_at ${1:device}"
 			],
 			"description": "Integer"
 	},
 
-	"last_active_global_at": {
+	"inputs.last_active_global_at": {
 			"prefix": "args.inputs.last_active_global_at",
 			"body": [
-					"args.inputs.last_active_global_at $1{:device}"
+					"args.inputs.last_active_global_at ${1:device}"
 			],
 			"description": "Integer"
 	},
 
-	"locale": {
+	"inputs.locale": {
 			"prefix": "args.inputs.locale",
 			"body": [
 					"args.inputs.locale"
@@ -31,7 +31,7 @@
 			"description": "String"
 	},
 
-	"locale_raw": {
+	"inputs.locale_raw": {
 			"prefix": "args.inputs.locale_raw",
 			"body": [
 					"args.inputs.locale_raw"
@@ -39,7 +39,7 @@
 			"description": "String"
 	},
 
-	"up": {
+	"inputs.up": {
 			"prefix": "args.inputs.up",
 			"body": [
 					"args.inputs.up"
@@ -47,7 +47,7 @@
 			"description": "Boolean"
 	},
 
-	"down": {
+	"inputs.down": {
 			"prefix": "args.inputs.down",
 			"body": [
 					"args.inputs.down"
@@ -55,7 +55,7 @@
 			"description": "Boolean"
 	},
 
-	"left": {
+	"inputs.left": {
 			"prefix": "args.inputs.left",
 			"body": [
 					"args.inputs.left"
@@ -63,7 +63,7 @@
 			"description": "Boolean"
 	},
 
-	"right": {
+	"inputs.right": {
 			"prefix": "args.inputs.right",
 			"body": [
 					"args.inputs.right"
@@ -71,7 +71,7 @@
 			"description": "Boolean"
 	},
 
-	"left_right": {
+	"inputs.left_right": {
 			"prefix": "args.inputs.left_right",
 			"body": [
 					"args.inputs.left_right"
@@ -79,7 +79,7 @@
 			"description": "Signed Integer"
 	},
 
-	"left_right_perc": {
+	"inputs.left_right_perc": {
 			"prefix": "args.inputs.left_right_perc",
 			"body": [
 					"args.inputs.left_right_perc"
@@ -87,7 +87,7 @@
 			"description": "Float"
 	},
 
-	"left_right_directional": {
+	"inputs.left_right_directional": {
 			"prefix": "args.inputs.left_right_directional",
 			"body": [
 					"args.inputs.left_right_directional"
@@ -95,7 +95,7 @@
 			"description": "Signed Integer"
 	},
 
-	"left_right_directional_perc": {
+	"inputs.left_right_directional_perc": {
 			"prefix": "args.inputs.left_right_directional_perc",
 			"body": [
 					"args.inputs.left_right_directional_perc"
@@ -103,7 +103,7 @@
 			"description": "Float"
 	},
 
-	"up_down": {
+	"inputs.up_down": {
 			"prefix": "args.inputs.up_down",
 			"body": [
 					"args.inputs.up_down"
@@ -111,7 +111,7 @@
 			"description": "Signed Integer"
 	},
 
-	"up_down_directional": {
+	"inputs.up_down_directional": {
 			"prefix": "args.inputs.up_down_directional",
 			"body": [
 					"args.inputs.up_down_directional"
@@ -119,7 +119,7 @@
 			"description": "Signed Integer"
 	},
 
-	"up_down_perc": {
+	"inputs.up_down_perc": {
 			"prefix": "args.inputs.up_down_perc",
 			"body": [
 					"args.inputs.up_down_perc"
@@ -127,7 +127,7 @@
 			"description": "Float"
 	},
 
-	"text": {
+	"inputs.text": {
 			"prefix": "args.inputs.text",
 			"body": [
 					"args.inputs.text"
