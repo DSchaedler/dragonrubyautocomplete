@@ -5,7 +5,7 @@ Visual Studio extension to streamline DragonRuby Development.
 [Packaged Releases](https://github.com/DSchaedler/dragonrubyautocomplete/releases)
 
 ## Release Notes
-
+* [v0.0.6-dev] Add keyboard inputs. Improve whitespace. Fix typo in controller input.
 * [v0.0.5-dev] Consolidate mouse inputs. Finish controller and copy through controller four.
 * [v0.0.4-dev] Add Mouse, Touch, some controller inputs. Improve namespacing. Fix wildcards.
 * [v0.0.3-dev] Rebuilt the thing to work. Added a bunch more snippets.
