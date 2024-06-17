@@ -32,5 +32,10 @@
 	"outputs.debug": {
 		"prefix": "args.outputs.debug",
 		"body": [ "args.outputs.debug << { x: $1, y: $2, w: $3, h: $4, primitive_marker: :$5 }" ],
-		"description": "Debug Primitive" }
+		"description": "Debug Primitive" },
+
+	"args.outputs.sounds": {
+		"prefix": "args.outputs.sounds",
+		"body":[ "args.outputs.sounds << '${1:wav_or_ogg_path}'" ],
+		"description": "Play Sound"	}
 }

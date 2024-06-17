@@ -1,0 +1,11 @@
+{
+	"attr": {
+		"prefix": "attr",
+		"body": [ "attr" ],
+		"description": "Alias to attr_accessor" },
+		
+	"attr_gtk": {
+		"prefix": "attr_gtk",
+		"body": [ "attr_gtk" ],
+		"description": "Add environment methods to class. Do not need to pass args." }	
+}

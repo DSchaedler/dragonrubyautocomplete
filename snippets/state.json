@@ -1,0 +1,6 @@
+{
+	"state.tick_count": {
+		"prefix": "args.state.tick_count",
+		"body": [ "args.state.tick_count" ],
+		"description": "Integer" }	
+}

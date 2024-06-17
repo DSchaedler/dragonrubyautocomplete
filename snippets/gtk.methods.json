@@ -1,0 +1,40 @@
+{
+	"def tick args": {
+		"prefix": "def tick args",
+		"body": [
+			"# DragonRuby is built on mruby, not C Ruby: https://mruby.org/docs/api/",
+			"# Please read the engine documentation: https://docs.dragonruby.org/#/",
+			"",
+			"def tick args",
+			"  $0",
+			"end"
+		],
+		"description": "Code Block: Main Tick Loop"	},
+
+	"def boot args": {
+		"prefix": "def boot args",
+		"body": [
+			"def boot args",
+			"  $0",
+			"end"
+		],
+		"description": "Code Block: Boot Method" },
+
+	"def reset args": {
+		"prefix": "def reset args",
+		"body": [
+			"def reset args",
+			"  $0",
+			"end"
+		],
+		"description": "Code Block: Reset Method" },
+	
+	"def shutdown args": {
+		"prefix": "def shutdown args",
+		"body": [
+			"def shutdown args",
+			"  $0",
+			"end"
+		],
+		"description": "Code Block: Shutdown Method" }
+}

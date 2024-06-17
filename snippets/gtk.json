@@ -1,0 +1,111 @@
+{
+	"gtk.queue_sound": {
+		"prefix": "args.gtk.queue_sound",
+		"body":[ "args.gtk.queue_sound '${1:ogg_path}'" ],
+		"description": "Play Sound"	},
+
+	"gtk.reset": {
+		"prefix": "args.gtk.reset",
+		"body": [ "args.gtk.reset" ],
+		"description": "Reset Game State" },
+
+	"gtk.get_pixels": {
+		"prefix": "args.gtk.get_pixels",
+		"body": [ "args.gtk.get_pixels \"${1:PATH}\"" ],
+		"description": "Array" },
+	
+	"gtk.ffi_misc.gtk_dlopen": {
+		"prefix": "args.gtk.ffi_misc.gtk_dlopen",
+		"body": [ "args.gtk.ffi_misc.gtk_dlopen(\"${1:PATH}\"" ],
+		"description": "Load C Extension" },
+
+	"gtk.calcstringbox": {
+		"prefix": "args.gtk.calcstringbox",
+		"body": [ "args.gtk.calcstringbox ${1:TEXT} ${2:SIZE_ENUM} ${3:FONT}" ],
+		"description": "Array [w, h]" },
+	
+	"gtk.request_quit": {
+		"prefix": "args.gtk.request_quit",
+		"body": [ "args.gtk.request_quit" ],
+		"description": "Close Game" },
+	
+	"gtk.quit_requested?": {
+		"prefix": "args.gtk.quit_requested?",
+		"body": [ "args.gtk.quit_requested?" ],
+		"description": "Boolean" },
+	
+	"gtk.set_window_fullscreen": {
+		"prefix": "args.gtk.set_window_fullscreen",
+		"body": [ "args.gtk.set_window_fullscreen ${1:BOOLEAN}" ],
+		"description": "" },
+	
+	"gtk.window_fullscreen?": {
+		"prefix": "args.gtk.window_fullscreen?",
+		"body": [ "args.gtk.window_fullscreen?" ],
+		"description": "Boolean" },
+	
+	"gtk.set_window_scale": {
+		"prefix": "args.gtk.set_window_scale",
+		"body": [ "args.gtk.set_window_scale ${1:FLOAT}" ],
+		"description": "Change scale from 1280x720" },
+	
+	"gtk.platform?": {
+		"prefix": "args.gtk.platform?",
+		"body": [ "args.gtk.platform? ${1:SYMBOL}" ],
+		"description": "Boolean" },
+	
+	"gtk.production?": {
+		"prefix": "args.gtk.production?",
+		"body": [ "args.gtk.production?" ],
+		"description": "Boolean" },
+	
+	"gtk.open_uri": {
+		"prefix": "args.gtk.open_uri",
+		"body": [ "args.gtk.open_uri ${1:URI}" ],
+		"description": "Open Link in Default Browser" },
+	
+	"gtk.system": {
+		"prefix": "args.gtk.system",
+		"body": [ "args.gtk.system ${1:STRING}" ],
+		"description": "Send Command to the OS CLI. Ouput is sent to the console." },
+	
+	"gtk.exec": {
+		"prefix": "args.gtk.exec",
+		"body": [ "args.gtk.exec ${1:String}" ],
+		"description": "Send Command to the OS CLI. Output is returned as a String" },
+	
+	"gtk.show_cursor": {
+		"prefix": "args.gtk.show_cursor",
+		"body": [ "args.gtk.show_cursor" ],
+		"description": "" },
+	
+	"gtk.hide_cursor": {
+		"prefix": "args.gtk.hide_cursor",
+		"body": [ "args.gtk.hide_cursor" ],
+		"description": "" },
+	
+	"gtk.cursor_shown?": {
+		"prefix": "args.gtk.cursor_shown?",
+		"body": [ "args.gtk.cursor_shown?" ],
+		"description": "Boolean" },
+	
+	"gtk.set_mouse_grab": {
+		"prefix": "args.gtk.set_mouse_grab",
+		"body": [ "args.gtk.set_mouse_grab ${1:INTEGER}" ],
+		"description": "0: Ungrab\n1: Grab\n2: Grab, Hide, Relative Mode" },
+	
+	"gtk.set_system_cursor": {
+		"prefix": "args.gtk.set_system_cursor",
+		"body": [ "args.gtk.set_system_cursor ${1:STRING}" ],
+		"description": "\"arrow\"\n\"ibeam\"\n\"wait\"\n\"hand\"" },
+	
+	"gtk.set_cursor": {
+		"prefix": "args.gtk.set_cursor",
+		"body": [ "args.gtk.set_cursor ${1:PATH} ${2:X_OFFSET_OPTIONAL} ${3:Y_OFFSET_OPTIONAL)" ],
+		"description": "Replace the system Cursor" },
+	
+	"gtk.create_uuid": {
+		"prefix": "args.gtk.create_uuid",
+		"body": [ "args.gtk.create_uuid" ],
+		"description": "String. NOT SECURE" }
+}

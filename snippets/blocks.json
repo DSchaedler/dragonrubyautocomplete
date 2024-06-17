@@ -1,26 +1,4 @@
 {
-	"def tick args": {
-		"prefix": "def tick args",
-		"body": [
-			"# DragonRuby is built on mruby, not C Ruby: https://mruby.org/docs/api/",
-			"# Please read the engine documentation: https://docs.dragonruby.org/#/",
-			"",
-			"def tick args",
-			"  $0",
-			"end"
-		],
-		"description": "Code Block: Main Tick Loop"	},
-
-	"args.outputs.sounds": {
-		"prefix": "args.outputs.sounds",
-		"body":[ "args.outputs.sounds << '${1:wav_or_ogg_path}'" ],
-		"description": "Play Sound"	},
-
-	"args.gtk.queue_sound": {
-		"prefix": "args.gtk.queue_sound",
-		"body":[ "args.gtk.queue_sound '${1:ogg_path}'" ],
-		"description": "Play Sound"	},
-
 	"Pause when Unfocused": {
 		"prefix": "if (!args.inputs.keyboard.has_focus",
 		"body": [
