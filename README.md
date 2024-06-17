@@ -38,7 +38,9 @@ This extension was creatied using the following tutorial: https://code.visualstu
 3. Install [git](https://git-scm.com/)
 4. Install Yeoman and the Visual Studio Code Generator  
    a. `npm install --global yo generator-code`  
-5. Clone this repository as a project
+5. Install Visual Studio Code Extensions vsce Manager  
+   a. `npm install -g @vscode/vsce`  
+7. Clone this repository as a project  
 
 The current main file is here: https://github.com/DSchaedler/dragonrubyautocomplete/blob/main/snippets.json
 
