@@ -11,46 +11,19 @@
 	],
 	"contributes": {
 		"snippets": [
-			{
-				"language": "ruby",
-				"path": "./snippets/blocks.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/outputs.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/inputs.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/inputs.mouse.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/inputs.controller_one.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/inputs.controller_two.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/inputs.controller_three.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/inputs.controller_four.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/inputs.touch.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/inputs.keyboard.json"
-			}
+			{ "language": "ruby" , "path": "./snippets/blocks.json" },
+			{ "language": "ruby" , "path": "./snippets/outputs.json" },
+			{ "language": "ruby" , "path": "./snippets/inputs.json" },
+			{ "language": "ruby" , "path": "./snippets/inputs.mouse.json" },
+			{ "language": "ruby" , "path": "./snippets/inputs.controller_one.json" },
+			{ "language": "ruby" , "path": "./snippets/inputs.controller_two.json" },
+			{ "language": "ruby" , "path": "./snippets/inputs.controller_three.json" },
+			{ "language": "ruby" , "path": "./snippets/inputs.controller_four.json" },
+			{ "language": "ruby" , "path": "./snippets/inputs.touch.json" },
+			{ "language": "ruby" , "path": "./snippets/inputs.keyboard.json" },
+			{ "language": "ruby" , "path": "./snippets/gtk.json" },
+			{ "language": "ruby" , "path": "./snippets/gtk.methods.json" },
+			{ "language": "ruby" , "path": "./snippets/gtk.class_macros.json" }
 		]
 	}
 }
