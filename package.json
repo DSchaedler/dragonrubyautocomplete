@@ -33,19 +33,15 @@
 			},
 			{
 				"language": "ruby",
-				"path": "./snippets/inputs.mouse.click.json"
+				"path": "./snippets/inputs.controller_two.json"
 			},
 			{
 				"language": "ruby",
-				"path": "./snippets/inputs.mouse.down.json"
+				"path": "./snippets/inputs.controller_three.json"
 			},
 			{
 				"language": "ruby",
-				"path": "./snippets/inputs.mouse.previous_click.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/inputs.mouse.up.json"
+				"path": "./snippets/inputs.controller_four.json"
 			},
 			{
 				"language": "ruby",

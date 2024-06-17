@@ -293,5 +293,45 @@
 					"args.inputs.controller_one.truthy_keys"
 			],
 			"description": ""
+	},
+
+	"controller_one.key_down": {
+			"prefix": "args.inputs.controller_one.key_down",
+			"body": [
+					"args.inputs.controller_one.key_down.${1:BUTTON}"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_one.key_held": {
+			"prefix": "args.inputs.controller_one.key_held",
+			"body": [
+					"args.inputs.controller_one.key_held.${1:BUTTON}"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_one.key_up": {
+			"prefix": "args.inputs.controller_one.key_up",
+			"body": [
+					".${1:BUTTON}"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_one.left_analog_active?": {
+			"prefix": "args.inputs.controller_one.left_analog_active?",
+			"body": [
+					"args.inputs.controller_one.left_analog_active?(threshold_raw: ${1:optional}, threshold_perc: ${2:optional})"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_one.right_analog_active?": {
+			"prefix": "args.inputs.controller_one.right_analog_active?",
+			"body": [
+					"args.inputs.controller_one.right_analog_active?(threshold_raw: ${1:optional}, threshold_perc: ${2:optional})"
+			],
+			"description": "Boolean"
 	}
 }

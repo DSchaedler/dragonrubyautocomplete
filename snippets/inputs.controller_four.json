@@ -1,0 +1,337 @@
+{
+	"controller_four.name": {
+			"prefix": "args.inputs.controller_four.name",
+			"body": [
+					"args.inputs.controller_four.name"
+			],
+			"description": "String"
+	},
+
+	"controller_four.active": {
+			"prefix": "args.inputs.controller_four.active",
+			"body": [
+					"args.inputs.controller_four.active"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.up": {
+			"prefix": "args.inputs.controller_four.up",
+			"body": [
+					"args.inputs.controller_four.up"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.down": {
+			"prefix": "args.inputs.controller_four.down",
+			"body": [
+					"args.inputs.controller_four.down"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.left": {
+			"prefix": "args.inputs.controller_four.left",
+			"body": [
+					"args.inputs.controller_four.left"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.right": {
+			"prefix": "args.inputs.controller_four.right",
+			"body": [
+					"args.inputs.controller_four.right"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.left_right": {
+			"prefix": "args.inputs.controller_four.left_right",
+			"body": [
+					"args.inputs.controller_four.left_right"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_four.up_down": {
+			"prefix": "args.inputs.controller_four.up_down",
+			"body": [
+					"args.inputs.controller_four.up_down"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_four.left_analog_x_raw": {
+			"prefix": "args.inputs.controller_four.left_analog_x_raw",
+			"body": [
+					"args.inputs.controller_four.left_analog_x_raw"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_four.right_analog_x_raw": {
+			"prefix": "args.inputs.controller_four.right_analog_x_raw",
+			"body": [
+					"args.inputs.controller_four.right_analog_x_raw"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_four.left_analog_y_raw": {
+			"prefix": "args.inputs.controller_four.left_analog_y_raw",
+			"body": [
+					"args.inputs.controller_four.left_analog_y_raw"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_four.right_analog_y_raw": {
+			"prefix": "args.inputs.controller_four.right_analog_y_raw",
+			"body": [
+					"args.inputs.controller_four.right_analog_y_raw"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_four.left_analog_x_perc": {
+			"prefix": "args.inputs.controller_four.left_analog_x_perc",
+			"body": [
+					"args.inputs.controller_four.left_analog_x_perc"
+			],
+			"description": "Float"
+	},
+
+	"controller_four.right_analog_x_perc": {
+			"prefix": "args.inputs.controller_four.right_analog_x_perc",
+			"body": [
+					"args.inputs.controller_four.right_analog_x_perc"
+			],
+			"description": "Float"
+	},
+
+	"controller_four.left_analog_y_perc": {
+			"prefix": "args.inputs.controller_four.left_analog_y_perc",
+			"body": [
+					"args.inputs.controller_four.left_analog_y_perc"
+			],
+			"description": "Float"
+	},
+
+	"controller_four.right_analog_y_perc": {
+			"prefix": "args.inputs.controller_four.right_analog_y_perc",
+			"body": [
+					"args.inputs.controller_four.right_analog_y_perc"
+			],
+			"description": "Float"
+	},
+
+	"controller_four.dpad_up": {
+			"prefix": "args.inputs.controller_four.dpad_up",
+			"body": [
+					"args.inputs.controller_four.dpad_up"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.directional_up": {
+			"prefix": "args.inputs.controller_four.directional_up",
+			"body": [
+					"args.inputs.controller_four.directional_up"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.dpad_down": {
+			"prefix": "args.inputs.controller_four.dpad_down",
+			"body": [
+					"args.inputs.controller_four.dpad_down"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.directional_down": {
+			"prefix": "args.inputs.controller_four.directional_down",
+			"body": [
+					"args.inputs.controller_four.directional_down"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.dpad_left": {
+			"prefix": "args.inputs.controller_four.dpad_left",
+			"body": [
+					"args.inputs.controller_four.dpad_left"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.directional_left": {
+			"prefix": "args.inputs.controller_four.directional_left",
+			"body": [
+					"args.inputs.controller_four.directional_left"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.dpad_right": {
+			"prefix": "args.inputs.controller_four.dpad_right",
+			"body": [
+					"args.inputs.controller_four.dpad_right"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.direcitonal_right": {
+			"prefix": "args.inputs.controller_four.directional_right",
+			"body": [
+					"args.inputs.controller_four.directional_right"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.a": {
+			"prefix": "args.inputs.controller_four.a",
+			"body": [
+					"args.inputs.controller_four.a"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.b": {
+			"prefix": "args.inputs.controller_four.b",
+			"body": [
+					"args.inputs.controller_four.b"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.x": {
+			"prefix": "args.inputs.controller_four.x",
+			"body": [
+					"args.inputs.controller_four.x"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.y": {
+			"prefix": "args.inputs.controller_four.y",
+			"body": [
+					"args.inputs.controller_four.y"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.l1": {
+		"prefix": "args.inputs.controller_four.l1",
+		"body": [
+				"args.inputs.controller_four.l1"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_four.r1": {
+		"prefix": "args.inputs.controller_four.r1",
+		"body": [
+				"args.inputs.controller_four.r1"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_four.l2": {
+		"prefix": "args.inputs.controller_four.l2",
+		"body": [
+				"args.inputs.controller_four.l2"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_four.r2": {
+		"prefix": "args.inputs.controller_four.r2",
+		"body": [
+				"args.inputs.controller_four.r2"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_four.l3": {
+		"prefix": "args.inputs.controller_four.l3",
+		"body": [
+				"args.inputs.controller_four.l3"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_four.r3": {
+		"prefix": "args.inputs.controller_four.r3",
+		"body": [
+				"args.inputs.controller_four.r3"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_four.start": {
+		"prefix": "args.inputs.controller_four.start",
+		"body": [
+				"args.inputs.controller_four.start"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_four.select": {
+		"prefix": "args.inputs.controller_four.select",
+		"body": [
+				"args.inputs.controller_four.select"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_four.truthy_keys": {
+			"prefix": "args.inputs.controller_four.truthy_keys",
+			"body": [
+					"args.inputs.controller_four.truthy_keys"
+			],
+			"description": ""
+	},
+
+	"controller_four.key_down": {
+			"prefix": "args.inputs.controller_four.key_down",
+			"body": [
+					"args.inputs.controller_four.key_down.${1:BUTTON}"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.key_held": {
+			"prefix": "args.inputs.controller_four.key_held",
+			"body": [
+					"args.inputs.controller_four.key_held.${1:BUTTON}"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.key_up": {
+			"prefix": "args.inputs.controller_four.key_up",
+			"body": [
+					".${1:BUTTON}"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.left_analog_active?": {
+			"prefix": "args.inputs.controller_four.left_analog_active?",
+			"body": [
+					"args.inputs.controller_four.left_analog_active?(threshold_raw: ${1:optional}, threshold_perc: ${2:optional})"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_four.right_analog_active?": {
+			"prefix": "args.inputs.controller_four.right_analog_active?",
+			"body": [
+					"args.inputs.controller_four.right_analog_active?(threshold_raw: ${1:optional}, threshold_perc: ${2:optional})"
+			],
+			"description": "Boolean"
+	}
+}

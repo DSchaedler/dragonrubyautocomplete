@@ -1,0 +1,337 @@
+{
+	"controller_two.name": {
+			"prefix": "args.inputs.controller_two.name",
+			"body": [
+					"args.inputs.controller_two.name"
+			],
+			"description": "String"
+	},
+
+	"controller_two.active": {
+			"prefix": "args.inputs.controller_two.active",
+			"body": [
+					"args.inputs.controller_two.active"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.up": {
+			"prefix": "args.inputs.controller_two.up",
+			"body": [
+					"args.inputs.controller_two.up"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.down": {
+			"prefix": "args.inputs.controller_two.down",
+			"body": [
+					"args.inputs.controller_two.down"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.left": {
+			"prefix": "args.inputs.controller_two.left",
+			"body": [
+					"args.inputs.controller_two.left"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.right": {
+			"prefix": "args.inputs.controller_two.right",
+			"body": [
+					"args.inputs.controller_two.right"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.left_right": {
+			"prefix": "args.inputs.controller_two.left_right",
+			"body": [
+					"args.inputs.controller_two.left_right"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_two.up_down": {
+			"prefix": "args.inputs.controller_two.up_down",
+			"body": [
+					"args.inputs.controller_two.up_down"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_two.left_analog_x_raw": {
+			"prefix": "args.inputs.controller_two.left_analog_x_raw",
+			"body": [
+					"args.inputs.controller_two.left_analog_x_raw"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_two.right_analog_x_raw": {
+			"prefix": "args.inputs.controller_two.right_analog_x_raw",
+			"body": [
+					"args.inputs.controller_two.right_analog_x_raw"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_two.left_analog_y_raw": {
+			"prefix": "args.inputs.controller_two.left_analog_y_raw",
+			"body": [
+					"args.inputs.controller_two.left_analog_y_raw"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_two.right_analog_y_raw": {
+			"prefix": "args.inputs.controller_two.right_analog_y_raw",
+			"body": [
+					"args.inputs.controller_two.right_analog_y_raw"
+			],
+			"description": "Signed Integer"
+	},
+
+	"controller_two.left_analog_x_perc": {
+			"prefix": "args.inputs.controller_two.left_analog_x_perc",
+			"body": [
+					"args.inputs.controller_two.left_analog_x_perc"
+			],
+			"description": "Float"
+	},
+
+	"controller_two.right_analog_x_perc": {
+			"prefix": "args.inputs.controller_two.right_analog_x_perc",
+			"body": [
+					"args.inputs.controller_two.right_analog_x_perc"
+			],
+			"description": "Float"
+	},
+
+	"controller_two.left_analog_y_perc": {
+			"prefix": "args.inputs.controller_two.left_analog_y_perc",
+			"body": [
+					"args.inputs.controller_two.left_analog_y_perc"
+			],
+			"description": "Float"
+	},
+
+	"controller_two.right_analog_y_perc": {
+			"prefix": "args.inputs.controller_two.right_analog_y_perc",
+			"body": [
+					"args.inputs.controller_two.right_analog_y_perc"
+			],
+			"description": "Float"
+	},
+
+	"controller_two.dpad_up": {
+			"prefix": "args.inputs.controller_two.dpad_up",
+			"body": [
+					"args.inputs.controller_two.dpad_up"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.directional_up": {
+			"prefix": "args.inputs.controller_two.directional_up",
+			"body": [
+					"args.inputs.controller_two.directional_up"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.dpad_down": {
+			"prefix": "args.inputs.controller_two.dpad_down",
+			"body": [
+					"args.inputs.controller_two.dpad_down"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.directional_down": {
+			"prefix": "args.inputs.controller_two.directional_down",
+			"body": [
+					"args.inputs.controller_two.directional_down"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.dpad_left": {
+			"prefix": "args.inputs.controller_two.dpad_left",
+			"body": [
+					"args.inputs.controller_two.dpad_left"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.directional_left": {
+			"prefix": "args.inputs.controller_two.directional_left",
+			"body": [
+					"args.inputs.controller_two.directional_left"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.dpad_right": {
+			"prefix": "args.inputs.controller_two.dpad_right",
+			"body": [
+					"args.inputs.controller_two.dpad_right"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.direcitonal_right": {
+			"prefix": "args.inputs.controller_two.directional_right",
+			"body": [
+					"args.inputs.controller_two.directional_right"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.a": {
+			"prefix": "args.inputs.controller_two.a",
+			"body": [
+					"args.inputs.controller_two.a"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.b": {
+			"prefix": "args.inputs.controller_two.b",
+			"body": [
+					"args.inputs.controller_two.b"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.x": {
+			"prefix": "args.inputs.controller_two.x",
+			"body": [
+					"args.inputs.controller_two.x"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.y": {
+			"prefix": "args.inputs.controller_two.y",
+			"body": [
+					"args.inputs.controller_two.y"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.l1": {
+		"prefix": "args.inputs.controller_two.l1",
+		"body": [
+				"args.inputs.controller_two.l1"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_two.r1": {
+		"prefix": "args.inputs.controller_two.r1",
+		"body": [
+				"args.inputs.controller_two.r1"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_two.l2": {
+		"prefix": "args.inputs.controller_two.l2",
+		"body": [
+				"args.inputs.controller_two.l2"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_two.r2": {
+		"prefix": "args.inputs.controller_two.r2",
+		"body": [
+				"args.inputs.controller_two.r2"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_two.l3": {
+		"prefix": "args.inputs.controller_two.l3",
+		"body": [
+				"args.inputs.controller_two.l3"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_two.r3": {
+		"prefix": "args.inputs.controller_two.r3",
+		"body": [
+				"args.inputs.controller_two.r3"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_two.start": {
+		"prefix": "args.inputs.controller_two.start",
+		"body": [
+				"args.inputs.controller_two.start"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_two.select": {
+		"prefix": "args.inputs.controller_two.select",
+		"body": [
+				"args.inputs.controller_two.select"
+		],
+		"description": "Boolean"
+	},
+
+	"controller_two.truthy_keys": {
+			"prefix": "args.inputs.controller_two.truthy_keys",
+			"body": [
+					"args.inputs.controller_two.truthy_keys"
+			],
+			"description": ""
+	},
+
+	"controller_two.key_down": {
+			"prefix": "args.inputs.controller_two.key_down",
+			"body": [
+					"args.inputs.controller_two.key_down.${1:BUTTON}"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.key_held": {
+			"prefix": "args.inputs.controller_two.key_held",
+			"body": [
+					"args.inputs.controller_two.key_held.${1:BUTTON}"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.key_up": {
+			"prefix": "args.inputs.controller_two.key_up",
+			"body": [
+					".${1:BUTTON}"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.left_analog_active?": {
+			"prefix": "args.inputs.controller_two.left_analog_active?",
+			"body": [
+					"args.inputs.controller_two.left_analog_active?(threshold_raw: ${1:optional}, threshold_perc: ${2:optional})"
+			],
+			"description": "Boolean"
+	},
+
+	"controller_two.right_analog_active?": {
+			"prefix": "args.inputs.controller_two.right_analog_active?",
+			"body": [
+					"args.inputs.controller_two.right_analog_active?(threshold_raw: ${1:optional}, threshold_perc: ${2:optional})"
+			],
+			"description": "Boolean"
+	}
+}
