@@ -1,4 +1,4 @@
-# dragonrubyautocomplete README
+# DragonRuby Autocomplete
 
 Visual Studio extension to streamline DragonRuby Development.
 
