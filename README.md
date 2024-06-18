@@ -10,16 +10,6 @@ Visual Studio extension to streamline DragonRuby Development.
 * [Inputs](https://docs.dragonruby.org/#/api/inputs)
 * [Runtime](https://docs.dragonruby.org/#/api/runtime)
 
-## Release Notes  
-
-* [v0.0.7-dev] Add GTK methods.
-* [v0.0.6-dev] Add keyboard inputs. Improve whitespace. Fix typo in controller input.
-* [v0.0.5-dev] Consolidate mouse inputs. Finish controller and copy through controller four.
-* [v0.0.4-dev] Add Mouse, Touch, some controller inputs. Improve namespacing. Fix wildcards.
-* [v0.0.3-dev] Rebuilt the thing to work. Added a bunch more snippets.
-* [v0.0.2-dev] Snippets for Sounds. Link to Documentation.
-* [v0.0.1-dev] Inital Commit  
-
 ## Contributing
 
 This extension was creatied using the following tutorial: https://code.visualstudio.com/api/get-started/your-first-extension. The dependencies are not required to contribute to the project, but are highly recommended.
@@ -38,3 +28,13 @@ Please do not contribute any unlicensed code or full samples to this project.
 Useful Links:  
 [Testing Extensions](https://code.visualstudio.com/api/working-with-extensions/testing-extension)  
 [Creting Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets)  
+
+## Release Notes  
+
+* [v0.0.7-dev] Add GTK methods.
+* [v0.0.6-dev] Add keyboard inputs. Improve whitespace. Fix typo in controller input.
+* [v0.0.5-dev] Consolidate mouse inputs. Finish controller and copy through controller four.
+* [v0.0.4-dev] Add Mouse, Touch, some controller inputs. Improve namespacing. Fix wildcards.
+* [v0.0.3-dev] Rebuilt the thing to work. Added a bunch more snippets.
+* [v0.0.2-dev] Snippets for Sounds. Link to Documentation.
+* [v0.0.1-dev] Inital Commit  
