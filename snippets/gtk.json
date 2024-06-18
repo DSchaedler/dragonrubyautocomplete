@@ -267,5 +267,115 @@
 	"gtk.slowmo!": {
 	  "prefix": "args.gtk.slowmo!",
 	  "body": [ "args.gtk.slowmo! ${1:INTEGER}" ],
-	  "description": "Reduce the simulation speed to a factor of 60 FPS" }	
+	  "description": "Reduce the simulation speed to a factor of 60 FPS" },
+
+	"gtk.show_console": {
+		"prefix": "args.gtk.show_console",
+		"body": [ "args.gtk.show_console" ],
+		"description": "" },
+	
+	"gtk.hide_console": {
+		"prefix": "args.gtk.hide_console",
+		"body": [ "args.gtk.hide_console" ],
+		"description": "" },
+	
+	"gtk.enable_console": {
+		"prefix": "args.gtk.enable_console",
+		"body": [ "args.gtk.enable_console" ],
+		"description": "" },
+	
+	"gtk.disable_console": {
+		"prefix": "args.gtk.disable_console",
+		"body": [ "args.gtk.disable_console" ],
+		"description": "" },
+	
+	"gtk.disable_reset_via_ctrl_r": {
+		"prefix": "args.gtk.disable_reset_via_ctrl_r",
+		"body": [ "args.gtk.disable_reset_via_ctrl_r" ],
+		"description": "" },
+	
+	"gtk.disable_controller_config": {
+		"prefix": "args.gtk.disable_controller_config",
+		"body": [ "args.gtk.disable_controller_config" ],
+		"description": "" },
+	
+	"gtk.enable_controller_config": {
+		"prefix": "args.gtk.enable_controller_config",
+		"body": [ "args.gtk.enable_controller_config" ],
+		"description": "" },
+	
+	"gtk.start_recording": {
+		"prefix": "args.gtk.start_recording",
+		"body": [ "args.gtk.start_recording" ],
+		"description": "" },
+	
+	"gtk.stop_recording": {
+		"prefix": "args.gtk.stop_recording",
+		"body": [ "args.gtk.stop_recording" ],
+		"description": "" },
+	
+	"gtk.cancel_recording": {
+		"prefix": "args.gtk.cancel_recording",
+		"body": [ "args.gtk.cancel_recording" ],
+		"description": "" },
+	
+	"gtk.start_reply": {
+		"prefix": "args.gtk.start_replay",
+		"body": [ "args.gtk.start_replay" ],
+		"description": "" },
+	
+	"gtk.stop_replay": {
+		"prefix": "args.gtk.stop_replay",
+		"body": [ "args.gtk.stop_replay" ],
+		"description": "" },
+	
+	"gtk.get_base_dir": {
+		"prefix": "args.gtk.get_base_dir",
+		"body": [ "args.gtk.get_base_dir" ],
+		"description": "" },
+	
+	"gtk.get_game_dir": {
+		"prefix": "args.gtk.get_game_dir",
+		"body": [ "args.gtk.get_game_dir" ],
+		"description": "" },
+	
+	"gtk.get_game_dir_url": {
+		"prefix": "args.gtk.get_game_dir_url",
+		"body": [ "args.gtk.get_game_dir_url" ],
+		"description": "" },
+	
+	"gtk.open_game_dir": {
+		"prefix": "args.gtk.open_game_dir",
+		"body": [ "args.gtk.open_game_dir" ],
+		"description": "" },
+	
+	"gtk.write_file_root": {
+		"prefix": "args.gtk.write_file_root",
+		"body": [ "args.gtk.write_file_root" ],
+		"description": "" },
+	
+	"gtk.append_file_root": {
+		"prefix": "args.gtk.append_file_root",
+		"body": [ "args.gtk.append_file_root" ],
+		"description": "" },
+	
+	"gtk.argv": {
+		"prefix": "args.gtk.argv",
+		"body": [ "args.gtk.argv" ],
+		"description": "String" },
+	
+	"gtk.cli_arguments": {
+		"prefix": "args.gtk.cli_arguments",
+		"body": [ "args.gtk.cli_arguments" ],
+		"description": "Hash" },
+	
+	"gtk.download_stb_rb": {
+		"prefix": "args.gtk.download_stb_rb",
+		"body": [ "args.gtk.download_stb_rb \"{1:STRING}\", \"${2:STRING_OPTIONAL}\", \"${3:STRING_OPTIONAL}\"" ],
+		"description": "" },
+	
+	"gtk.download_stb_rb_raw": {
+		"prefix": "args.gtk.download_stb_rb_raw",
+		"body": [ "args.gtk.download_stb_rb_raw \"{1:STRING}\", \"${2:PATH}\"" ],
+		"description": "" }	
 }
