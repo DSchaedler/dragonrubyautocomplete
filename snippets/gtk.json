@@ -377,5 +377,25 @@
 	"gtk.download_stb_rb_raw": {
 		"prefix": "args.gtk.download_stb_rb_raw",
 		"body": [ "args.gtk.download_stb_rb_raw \"{1:STRING}\", \"${2:PATH}\"" ],
+		"description": "" },
+		
+	"gtk.reload_history": {
+		"prefix": "args.gtk.reload_history",
+		"body": [ "args.gtk.reload_history" ],
+		"description": "Hash" },
+	
+	"gtk.reload_history_pending": {
+		"prefix": "args.gtk.reload_history_pending",
+		"body": [ "args.gtk.reload_history_pending" ],
+		"description": "Hash" },
+	
+	"gtk.reload_if_needed": {
+		"prefix": "args.gtk.reload_if_needed",
+		"body": [ "args.gtk.reload_if_needed ${1:PATH}, ${2:FORCE_BOOLEAN_OPTIONAL}" ],
+		"description": "" },
+	
+	"gtk.add_caller_to_puts!": {
+		"prefix": "args.gtk.add_caller_to_puts!",
+		"body": [ "args.gtk.add_caller_to_puts!" ],
 		"description": "" }	
 }
