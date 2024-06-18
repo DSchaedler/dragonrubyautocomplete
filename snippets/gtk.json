@@ -256,8 +256,16 @@
 	
 	"gtk.notify!": {
 		"prefix": "args.gtk.notify!",
-		"body": [ "args.gtk.notify! " ],
-		"description": "" }
+		"body": [ "args.gtk.notify! \"${1:STRING}\", ${2:INTEGER_FRAME_DURATION_OPTIONAL}" ],
+		"description": "Dev Only. Show a toast message." },
 	
+	"gtk.notify_extended!": {
+	  "prefix": "args.gtk.notify!",
+	  "body": [ "args.gtk.notify! message: \"${1:STRING}\", duration: {2:INTEGER}, env: {3:SYMBOL}" ],
+	  "description": "Show a toast message." },
 	
+	"gtk.slowmo!": {
+	  "prefix": "args.gtk.slowmo!",
+	  "body": [ "args.gtk.slowmo! ${1:INTEGER}" ],
+	  "description": "Reduce the simulation speed to a factor of 60 FPS" }	
 }
