@@ -180,8 +180,8 @@
 		"description": "Array of pending HTTP Requests" },
 
 	"request.respond": {
-		"prefix": ".respond",
-		"body": [ ".respond ${1:HTTP_CODE}, ${2:HTTP_RESPONSE}" ],
+		"prefix": "respond",
+		"body": [ "respond ${1:HTTP_CODE}, ${2:HTTP_RESPONSE}" ],
 		"description": "Respond to HTTP Requests" },
 	
 	"gtk.version": {
