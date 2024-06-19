@@ -1,0 +1,66 @@
+{
+	"geometry.inside_rect?": {
+		"prefix": "args.geometry.inside_rect?",
+		"body": [ "args.geometry.inside_rect? ${1:RECT_PRIMITIVE}, ${2:RECT_PRIMITIVE}" ],
+		"description": "Boolean" },
+	
+	"geometry.intersect_rect?": {
+		"prefix": "args.geometry.intersect_rect?",
+		"body": [ "args.geometry.intersect_rect? ${1:RECT_PRIMITIVE}, ${2:RECT_PRIMITIVE}" ],
+		"description": "Boolean" },
+	
+	"geometry.scale_rect": {
+		"prefix": "scale_rect",
+		"body": [ "scale_rect( ${1:SCALE_FLOAT}, ${2:ANCHOR_X_OPTIONAL}, ${3:ANCHOR_Y_OPTIONAL} )" ],
+		"description": "Rectangle Primitive" },
+	
+	"geometry.scale_rect_extended": {
+		"prefix": "scale_rect_extended",
+		"body": [ "scale_rect_extended( percentage_x: ${1:SCALE_X_FLOAT}, percentage_y: ${2:SCALE_Y_FLOAT}, anchor_x: ${3:ANCHOR_X}, anchor_y: ${4:ANCHOR_y} )" ],
+		"description": "Rectangle Primitive" },
+	
+	"geometry.anchor_rect": {
+		"prefix": "anchor_rect",
+		"body": [ "anchor_rect( ${1:ANCHOR_X}, ${2:ANCHOR_Y} )" ],
+		"description": "Rectangle Primitive" },
+	
+	"geometry.angle": {
+		"prefix": "args.geometry.angle",
+		"body": [ "args.geometry.angle ${1:POINT_TUPLE}, ${2:POINT_TUPLE}, " ],
+		"description": "Float" },
+	
+	"geometry.angle_from": {
+		"prefix": "args.geometry.angle_from",
+		"body": [ "args.geometry.angle_from ${1:POINT_TUPLE}, ${2:POINT_TUPLE}, " ],
+		"description": "Float" },
+	
+	"geometry.angle_to": {
+		"prefix": "args.geometry.angle_to",
+		"body": [ "args.geometry.angle_to ${1:POINT_TUPLE}, ${2:POINT_TUPLE}, " ],
+		"description": "Float" },
+
+	"geometry.angle_turn_direction": {
+		"prefix": "args.geometry.angle_turn_direction",
+		"body": [ "args.geometry.angle_turn_direction ${1:FLOAT}, ${2:FLOAT}" ],
+		"description": "Signed Integer" },
+	
+	"geometry.angle_delta": {
+		"prefix": "args.geometry.angle_delta",
+		"body": [ "args.geometry.angle_delta ${1:FLOAT}, ${2:FLOAT}" ],
+		"description": "Float" },
+	
+	"geometry.angle_within_range": {
+		"prefix": "args.geometry.angle_within_range",
+		"body": [ "args.geometry.angle_within_range ${1:TEST_ANGLE}, ${2:REFERENCE_ANGLE}, ${3:RANGE_FLOAT}" ],
+		"description": "Boolean" },
+	
+	"geometry.distance": {
+		"prefix": "args.geometry.distance",
+		"body": [ "args.geometry.distance ${1:POINT_TUPLE}, ${2:POINT_TUPLE}" ],
+		"description": "Float" },
+	
+	"geometry.point_inside_circle?": {
+		"prefix": "args.geometry.point_inside_circle?",
+		"body": [ "args.geometry.point_inside_circle? ${1:POINT_TUPLE}, ${2:CIRCLE_CENTER_POINT_TUPLE}, #{3:CIRCLE_RADIUS_FLOAT}" ],
+		"description": "Boolean" }
+}
