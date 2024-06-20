@@ -62,5 +62,65 @@
 	"geometry.point_inside_circle?": {
 		"prefix": "args.geometry.point_inside_circle?",
 		"body": [ "args.geometry.point_inside_circle? ${1:POINT_TUPLE}, ${2:CIRCLE_CENTER_POINT_TUPLE}, #{3:CIRCLE_RADIUS_FLOAT}" ],
-		"description": "Boolean" }
+		"description": "Boolean" },
+
+	"geometry.center_inside_rect": {
+		"prefix": "args.geometry.center_inside_rect",
+		"body": [ "args.geometry.center_inside_rect #{1:TEST_RECT}, ${2:REFERENCE_RECT}" ],
+		"description": "Rectangle Primitive" },
+	
+	"geometry.ray_test": {
+		"prefix": "args.geometry.ray_test",
+		"body": [ "args.geometry.ray_test ${1:POINT_TUPLE}, ${2:LINE_PRIMITIVE}" ],
+		"description": "Symbol" },
+	
+	"geometry.line_rise_run": {
+		"prefix": "args.geometry.line_rise_run",
+		"body": [ "args.geometry.line_rise_run ${LINE_PRIMITIVE}" ],
+		"description": "{x, y}" },
+	
+	"geometry.line_intersect": {
+		"prefix": "args.geometry.line_intersect",
+		"body": [ "args.geometry.line_intersect ${1:LINE_PRIMITIVE}, ${2:LINE_PRIMITIVE}" ],
+		"description": "{x, y}" },
+	
+	"geometry.ray_intersect": {
+		"prefix": "args.geometry.ray_intersect",
+		"body": [ "args.geometry.ray_intersect ${1:LINE_PRIMITIVE}, ${2:LINE_PRIMITIVE}" ],
+		"description": "{x, y}" },
+	
+	"geometry.rotate_point": {
+		"prefix": "args.geometry.rotate_point",
+		"body": [ "args.geometry.rotate_point ${1:POINT_PRIMITIVE}, ${2:FLOAT_DEGREES}" ],
+		"description": "{x, y}" },
+	
+	"geometry.find_intersect_rect": {
+		"prefix": "args.geometry.find_intersect_rect",
+		"body": [ "args.geometry.find_intersect_rect ${1:RECTANGLE_PRIMITIVE}, ${2:RECTANGLE_COLLECTION}" ],
+		"description": "Rectangle Primitive" },
+	
+	"geometry.find_all_intersect_rect": {
+		"prefix": "args.geometry.find_all_intersect_rect",
+		"body": [ "args.geometry.find_all_intersect_rect ${1:RECTANGLE_PRIMITIVE}, ${2:RECTANGLE_COLLECTION}" ],
+		"description": "Rectangle Collection" },
+	
+	"geometry.find_intersect_rect_quad_tree": {
+		"prefix": "args.geometry.find_intersect_rect_quad_tree",
+		"body": [ "args.geometry.find_intersect_rect_quad_tree ${1:RECTANGLE_PRIMITIVE}, ${2:QUAD_TREE}" ],
+		"description": "Rectangle Primitive" },
+	
+	"geometry.find_all_intersect_rect_quad_tree": {
+		"prefix": "args.geometry.find_all_intersect_rect_quad_tree",
+		"body": [ "args.geometry.find_all_intersect_rect_quad_tree ${1:RECTANGLE_PRIMITIVE}, ${2:QUAD_TREE}" ],
+		"description": "Rectangle Collection" },
+	
+	"geometry.create_quad_tree": {
+		"prefix": "args.geometry.create_quad_tree",
+		"body": [ "args.geometry.create_quad_tree ${1:RECTANGLE_COLLECTION}" ],
+		"description": "Quad Tree" },
+	
+	"geometry.line_angle": {
+		"prefix": "args.geometry.line_angle",
+		"body": [ "args.geometry.line_angle ${1:LINE}" ],
+		"description": "Float" }	
 }
