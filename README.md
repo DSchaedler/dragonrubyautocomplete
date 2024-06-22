@@ -8,7 +8,8 @@ Visual Studio extension to streamline DragonRuby Development.
 
 * [Outputs](https://docs.dragonruby.org/#/api/outputs)
 * [Inputs](https://docs.dragonruby.org/#/api/inputs)
-* [Runtime](https://docs.dragonruby.org/#/api/runtime)
+* [Runtime](https://docs.dragonruby.org/#/api/runtime)  
+* [Geometry](https://docs.dragonruby.org/#/api/geometry)  
 
 ## Contributing
 
