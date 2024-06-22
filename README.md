@@ -31,6 +31,7 @@ Useful Links:
 
 ## Release Notes  
 
+* [v0.0.9-dev] Finish Geometry Methods. Fix typos in Outputs.
 * [v0.0.8-dev] Fix a very annoying bug with the http respond method.
 * [v0.0.7-dev] Add GTK methods.
 * [v0.0.6-dev] Add keyboard inputs. Improve whitespace. Fix typo in controller input.

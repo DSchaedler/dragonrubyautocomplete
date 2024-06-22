@@ -2,7 +2,7 @@
 	"name": "dragonrubyautocomplete",
 	"displayName": "DragonRubyAutocomplete",
 	"description": "",
-	"version": "v0.0.8-dev",
+	"version": "v0.0.9-dev",
 	"engines": {
 		"vscode": "^1.90.0"
 	},
@@ -23,7 +23,8 @@
 			{ "language": "ruby" , "path": "./snippets/inputs.keyboard.json" },
 			{ "language": "ruby" , "path": "./snippets/gtk.json" },
 			{ "language": "ruby" , "path": "./snippets/gtk.methods.json" },
-			{ "language": "ruby" , "path": "./snippets/gtk.class_macros.json" }
+			{ "language": "ruby" , "path": "./snippets/gtk.class_macros.json" },
+			{ "language": "ruby" , "path": "./snippets/geometry.json" }
 		]
 	}
 }

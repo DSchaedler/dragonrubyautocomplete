@@ -77,22 +77,22 @@
 	"geometry.line_rise_run": {
 		"prefix": "args.geometry.line_rise_run",
 		"body": [ "args.geometry.line_rise_run ${LINE_PRIMITIVE}" ],
-		"description": "{x, y}" },
+		"description": "{ x, y }" },
 	
 	"geometry.line_intersect": {
 		"prefix": "args.geometry.line_intersect",
 		"body": [ "args.geometry.line_intersect ${1:LINE_PRIMITIVE}, ${2:LINE_PRIMITIVE}" ],
-		"description": "{x, y}" },
+		"description": "{ x, y }" },
 	
 	"geometry.ray_intersect": {
 		"prefix": "args.geometry.ray_intersect",
 		"body": [ "args.geometry.ray_intersect ${1:LINE_PRIMITIVE}, ${2:LINE_PRIMITIVE}" ],
-		"description": "{x, y}" },
+		"description": "{ x, y }" },
 	
 	"geometry.rotate_point": {
 		"prefix": "args.geometry.rotate_point",
 		"body": [ "args.geometry.rotate_point ${1:POINT_PRIMITIVE}, ${2:FLOAT_DEGREES}" ],
-		"description": "{x, y}" },
+		"description": "{ x, y }" },
 	
 	"geometry.find_intersect_rect": {
 		"prefix": "args.geometry.find_intersect_rect",
@@ -122,5 +122,65 @@
 	"geometry.line_angle": {
 		"prefix": "args.geometry.line_angle",
 		"body": [ "args.geometry.line_angle ${1:LINE}" ],
-		"description": "Float" }	
+		"description": "Float" },
+	
+	"geometry.vec2_dot_product": {
+	  "prefix": "args.geometry.vec2_dot_product",
+	  "body": [ "args.geometry.vec2_dot_product ${1:HASH_X_Y}, ${2:HASH_X_Y}" ],
+	  "description": "Float" },
+	
+	"geometry.vec_2_normalize": {
+		"prefix": "args.geometry.vec2_normalize",
+		"body": [ "args.geometry.vec2_normalize ${1:HASH_X_Y}" ],
+		"description": "{ x, y }" },
+	
+	"geometry.rect_props": {
+		"prefix": "args.geometry.rect_props",
+		"body": [ "args.geometry.rect_props ${1:RECTANGLE_PRIMITIVE}" ],
+		"description": "Rectangle Primitive" },
+	
+	"geometry.line_vec2": {
+		"prefix": "args.geometry.line_vec2",
+		"body": [ "args.geometry.line_vec2 ${1:LINE_PRIMITIVE}" ],
+		"description": "{ x, y }" },
+	
+	"geometry.vec2_magnitude": {
+		"prefix": "args.geometry.vec2_magnitude",
+		"body": [ "args.geometry.vec2_magnitude ${1:HASH_X_Y}" ],
+		"description": "Float" },
+	
+	"geometry.distance_squared": {
+		"prefix": "args.geometry.distance_squared",
+		"body": [ "args.geometry.distance_squared ${1:HASH_X_Y}, ${2:HASH_X_Y}" ],
+		"description": "Float" },
+	
+	"geometry.vec2_normal": {
+		"prefix": "args.geometry.vec2_normal",
+		"body": [ "args.geometry.vec2_normal ${1:HASH_X_Y}, ${2:HASH_X_Y}" ],
+		"description": "{ x, y }" },
+	
+	"geometry.circle_intersect_line?": {
+		"prefix": "args.geometry.circle_intersect_line?",
+		"body": [ "args.geometry.circle_intersect_line? ${1:HASH_X_Y_RADIUS}, ${1:LINE_PRIMITIVE}" ],
+		"description": "Boolean" },
+	
+	"geometry.line_normal": {
+		"prefix": "args.geometry.line_normal",
+		"body": [ "args.geometry.line_normal ${1:LINE_PRIMITIVE}, ${2:HASH_X_Y}" ],
+		"description": "{ x, y }" },
+	
+	"geometry.point_on_line?": {
+		"prefix": "args.geometry.point_on_line?",
+		"body": [ "args.geometry.point_on_line? ${1:HASH_X_Y}, ${2:LINE_PRIMITIVE}" ],
+		"description": "Boolean" },
+	
+	"geometry.find_collisions": {
+		"prefix": "args.geometry.find_collisions",
+		"body": [ "args.geometry.find_collisions ${1:RECTANGLE_COLLECTION_ARRAY}" ],
+		"description": "Hash" },
+	
+	"geometry.rect_navigate": {
+		"prefix": "args.geometry.rect_navigate",
+		"body": [ "args.geometry.rect_navigate( rect: ${1:RECTANGLE_PRIMITIVE}, rects: ${2:RECTANGLE_COLLECTION}, left_right: ${3:SIGNED INTEGER}, up_down: ${4:SIGNED_INTEGER}, directional_vector: ${5:OPTIONAL}, wrap_x: ${6:OPTIONAL}, wrap_y: ${7:OPTIONAL}, using: ${OPTIONAL} )" ],
+		"description": "Rectangle Primitive" }
 }

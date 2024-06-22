@@ -6,12 +6,12 @@
 
 	"outputs.sprites": {
 		"prefix": "args.outputs.sprites",
-		"body": [ "args.outputs.sprites << << { x: $1, y: $2, w: $3, h: $4, path: \"$5\" }" ],
+		"body": [ "args.outputs.sprites << { x: $1, y: $2, w: $3, h: $4, path: \"$5\" }" ],
 		"description": "Sprite" },
 	
 	"outputs.labels": {
-		"prefix": "args.otuputs.labels",
-		"body": [ "args.ouputs.labels << { x: $1, y: $2, text: \"$3\" }" ],
+		"prefix": "args.outputs.labels",
+		"body": [ "args.outputs.labels << { x: $1, y: $2, text: \"$3\" }" ],
 		"description": "Text" },
 
 	"outputs.borders": {
