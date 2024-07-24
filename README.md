@@ -2,6 +2,11 @@
 
 Visual Studio extension to streamline DragonRuby Development.
 
+
+## Installation  
+
+Grab the .vsix from the latest release.
+
 [Packaged Releases](https://github.com/DSchaedler/dragonrubyautocomplete/releases)
 
 ## Features  
