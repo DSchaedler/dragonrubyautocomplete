@@ -87,7 +87,7 @@ This does not include:
 
 Most Importantly, Amir Rajan (Creator of DragonRuby) knows what I'm doing and could ask me to take this down at any time. I am a moderator in the DragonRuby official Discord and have contributed heavily to the community.
 
-Secondly, the portion of the docs that is reproduced is the section referred to as the API. The documentation page has no license listed, and the dragonruby.org Terms of Service only specify that you many not use the service to violate any laws (including copyright laws. Purchasing and downloading the engine itself also offers no further license agreement.
+Secondly, the portion of the docs that is reproduced is the section referred to as the API. The documentation page has no license listed, and the dragonruby.org Terms of Service only specify that you many not use the service to violate any laws (including copyright laws). Purchasing and downloading the engine itself also offers no further license agreement.
 
 Under Supreme Court ruling No. 18–956. (Argued October 7, 2020—Decided April 5, 2021) the United States Supreme Court held that
 > Google’s copying of the Java SE API, which included only those  
