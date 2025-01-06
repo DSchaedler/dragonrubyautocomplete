@@ -91,7 +91,7 @@ Secondly, the portion of the docs that is reproduced is the section referred to 
 
 Under Supreme Court ruling No. 18–956. (Argued October 7, 2020—Decided April 5, 2021) the United States Supreme Court held that
 > Google’s copying of the Java SE API, which included only those  
-> lines of code that were needed to allow programmers to put their
+> lines of code that were needed to allow programmers to put their  
 > accrued talents to work in a new and transformative program, was a fair  
 > use of that material as a matter of law. Pp. 11–36.
 
