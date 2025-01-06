@@ -46,3 +46,41 @@ Useful Links:
 * [v0.0.3-dev] Rebuilt the thing to work. Added a bunch more snippets.
 * [v0.0.2-dev] Snippets for Sounds. Link to Documentation.
 * [v0.0.1-dev] Inital Commit  
+
+# License and Copyright  
+
+DragonRuby Autocomplete - Autocomplete snippets and utilities to streamline DragonRuby Development  
+Copyright (C) 2025 Dee Schaedler  
+  
+This program is free software: you can redistribute it and/or modify  
+it under the terms of the GNU General Public License as published by  
+the Free Software Foundation, either version 3 of the License, or  
+(at your option) any later version.  
+
+This program is distributed in the hope that it will be useful,  
+but WITHOUT ANY WARRANTY; without even the implied warranty of  
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the  
+GNU General Public License for more details.  
+
+You should have received a copy of the GNU General Public License  
+along with this program.  If not, see <https://www.gnu.org/licenses/>.  
+
+## License Scope & Relevance  
+
+TLDR: Don't rip me off. You may distribute the program and source code (including the required copyright and license statements), and you may treat the program and it's source code as a library (as defined by the GNU Lesser General Public License). However, the software is licensed under GPLv3 because it does not meet the technical definition of a library as defined under the LGPL. Please contact me for licensing if you are creating a commercial, for profit work which is not allowed under GPLv3.
+
+Because most of The Program is just data and repackaged documentation, it can be difficult to determine what, if anything, falls under the stated copyright and license. Additionally, the .json file format does not natively allow comments for the inclusion of a copyright disclaimer where it is appropriate.  
+
+Under the definitions of the GNU GPLv3, the covered work includes The Program, the Source Code, and the Object Code included in this repository.  
+
+The covered work includes, but is not limited to:
+ * The Program itself, the compiled version, and Object Code, in any form in which it they may be distributed.  
+ * The specific collection, arrangement, interpretation, and creative choices involved in the creation of The Program.  
+ * Source Code created by the author for the purpose of the covered work. Source Code in the covered work derived from other works by the same author is assumed to be appropriately licensed, or re-licensed under the new license agreement.  
+ * The name "DragonRuby Autocomplete".  
+
+This does not include:
+ * Configuration files, settings, System Libraries, Corresponding Source or other work which is included because it is necessary for compilation, but was not created by the author.  
+ * Source Code from other authors, which will will be licensed and noted when appropriate.  
+
+
