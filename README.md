@@ -83,4 +83,16 @@ This does not include:
  * Configuration files, settings, System Libraries, Corresponding Source or other work which is included because it is necessary for compilation, but was not created by the author.  
  * Source Code from other authors, which will will be licensed and noted when appropriate.  
 
+## What gives you the right to reproduce the DragonRuby Documentation?
 
+Most Importantly, Amir Rajan (Creator of DragonRuby) knows what I'm doing and could ask me to take this down at any time. I am a moderator in the DragonRuby official Discord and have contributed heavily to the community.
+
+Secondly, the portion of the docs that is reproduced is the section referred to as the API. The documentation page has no license listed, and the dragonruby.org Terms of Service only specify that you many not use the service to violate any laws (including copyright laws. Purchasing and downloading the engine itself also offers no further license agreement.
+
+Under Supreme Court ruling No. 18–956. (Argued October 7, 2020—Decided April 5, 2021) the United States Supreme Court held that
+> Google’s copying of the Java SE API, which included only those  
+> lines of code that were needed to allow programmers to put their
+> accrued talents to work in a new and transformative program, was a fair  
+> use of that material as a matter of law. Pp. 11–36.
+
+Very little is reproduced outside of the API potion, and no other copyrighted material like samples, guides, images, etc. are used. I would argue that this work transforms the API documentation in a way which allows programmers to use their accrued talents in a new way. However, fair use law is gross. Amir, please don't sue me.
