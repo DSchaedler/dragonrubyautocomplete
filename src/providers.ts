@@ -34,7 +34,7 @@ const vscodeApi = vscodeRuntime ?? {
 
 import { completionForContext, rubyKeywords } from './completion-data';
 import { getProjectCompletionMap } from './engine-scan';
-import { detectDragonRubyProject, notifyDragonRubyDetected } from './project-detection';
+import { detectDragonRubyProject } from './project-detection';
 
 // -----------------------------------------------------------------------------
 // Completion providers
@@ -44,7 +44,7 @@ import { detectDragonRubyProject, notifyDragonRubyDetected } from './project-det
 // easier to reason about.
 // -----------------------------------------------------------------------------
 
-export const dragonRubySnippetTriggerCharacters = ['d', 's', 'l', 'k', 'm', 'r', 't'] as const;
+export const dragonRubySnippetTriggerCharacters = ['c', 'd', 'h', 'k', 'l', 'm', 'p', 'r', 's', 't'] as const;
 
 const snippets: Record<string, { body: string; detail: string; doc: string }> = {
   tick: {
@@ -139,6 +139,16 @@ export function isDragonRubyFile(document: { fileName: string }): boolean {
   return detectDragonRubyProject(document.fileName);
 }
 
+function buildSnippetCompletionItems(): any[] {
+  return Object.entries(snippets).map(([label, value]) => {
+    const item = new vscodeApi.CompletionItem(label, vscodeApi.CompletionItemKind.Snippet) as any;
+    item.insertText = new (vscodeApi as any).SnippetString(value.body);
+    item.sortText = `0${label}`;
+    item.filterText = label;
+    return addDetail(item, value.detail, value.doc);
+  });
+}
+
 export function createDragonRubyCompletionProvider(): any {
   return {
     provideCompletionItems(document: any, position: any) {
@@ -149,10 +159,9 @@ export function createDragonRubyCompletionProvider(): any {
         return [];
       }
 
-      notifyDragonRubyDetected(document);
       const line = document.lineAt(position).text.slice(0, position.character);
       const projectMap = getProjectCompletionMap(document.fileName);
-      return completionForContext(line, projectMap).map((item) => {
+      const directItems = completionForContext(line, projectMap).map((item) => {
         const completionItem = new vscodeApi.CompletionItem(item.label, item.kind as number);
         completionItem.detail = item.detail ?? 'DragonRuby runtime';
         completionItem.insertText = item.insertText ?? item.label;
@@ -161,6 +170,8 @@ export function createDragonRubyCompletionProvider(): any {
         }
         return completionItem;
       });
+
+      return [...buildSnippetCompletionItems(), ...directItems];
     }
   };
 }
@@ -168,11 +179,7 @@ export function createDragonRubyCompletionProvider(): any {
 export function createDragonRubySnippetProvider(): any {
   return {
     provideCompletionItems() {
-      return Object.entries(snippets).map(([label, value]) => {
-        const item = new vscodeApi.CompletionItem(label, vscodeApi.CompletionItemKind.Snippet);
-        item.insertText = new (vscodeApi as any).SnippetString(value.body);
-        return addDetail(item, value.detail, value.doc);
-      });
+      return buildSnippetCompletionItems();
     }
   };
 }

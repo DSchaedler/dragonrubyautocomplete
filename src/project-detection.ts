@@ -122,6 +122,11 @@ export function determineProjectConfidence(filePath: string): 'confirmed' | 'unc
     return override ? 'confirmed' : 'rejected';
   }
 
+  const cached = projectDetectionCache.get(projectRoot);
+  if (cached !== undefined) {
+    return cached ? 'confirmed' : 'rejected';
+  }
+
   if (fs.existsSync(resolved)) {
     try {
       const text = fs.readFileSync(resolved, 'utf8');

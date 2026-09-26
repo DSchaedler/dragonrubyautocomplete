@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
-import { fileContainsDragonRubySignals, determineProjectConfidence, clearProjectOverride, getProjectOverride, initializeProjectDetectionState, projectOverrideCache, setProjectOverride } from './project-detection';
+import { fileContainsDragonRubySignals, determineProjectConfidence, clearProjectOverride, getProjectOverride, initializeProjectDetectionState, projectDetectionCache, projectOverrideCache, setProjectOverride } from './project-detection';
 import { describeProjectState } from './project-detection';
 
 function createMemento(initial: Record<string, unknown> = {}): { get<T>(key: string, defaultValue?: T): T; update(key: string, value: unknown): Thenable<void>; keys(): readonly string[] } {
@@ -62,4 +62,22 @@ test('returns explicit state text for a disabled project', () => {
   assert.ok(summary.includes('state=disabled'));
   assert.ok(summary.includes('project=project'));
   assert.ok(summary.includes('cache=empty'));
+});
+
+test('uses cached project detection before rescanning a project', () => {
+  const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'dragonruby-detection-cache-'));
+  const projectDir = path.join(tempRoot, 'game');
+  fs.mkdirSync(projectDir, { recursive: true });
+
+  const filePath = path.join(projectDir, 'main.rb');
+  fs.writeFileSync(filePath, "def tick args\n  args.state.player_y ||= 0\nend\n", 'utf8');
+
+  const cachedKey = path.dirname(filePath);
+  projectOverrideCache.clear();
+  projectDetectionCache.set(cachedKey, false);
+
+  assert.equal(determineProjectConfidence(filePath), 'rejected');
+
+  fs.rmSync(tempRoot, { recursive: true, force: true });
+  projectDetectionCache.delete(cachedKey);
 });

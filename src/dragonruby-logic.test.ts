@@ -109,6 +109,9 @@ test('does not offer generic completions immediately after the << operator', () 
   assert.deepEqual(suggestions, []);
 });
 
-test('includes the standard tick trigger in snippet trigger characters', () => {
+test('includes standard snippet prefixes and prioritizes snippet triggers', () => {
   assert.ok(dragonRubySnippetTriggerCharacters.includes('t'));
+  assert.ok(dragonRubySnippetTriggerCharacters.includes('c'));
+  assert.ok(dragonRubySnippetTriggerCharacters.includes('h'));
+  assert.ok(dragonRubySnippetTriggerCharacters.includes('p'));
 });
