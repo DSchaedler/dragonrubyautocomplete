@@ -1,9 +1,14 @@
 {
-  "name": "dragonruby-vscode-autocomplete",
-  "displayName": "DragonRuby VS Code Autocomplete",
+  "name": "dragonruby-autocomplete",
+  "displayName": "DragonRuby Autocomplete",
   "description": "Autocomplete support for DragonRuby game code in VS Code.",
-  "version": "0.1.0",
-  "publisher": "local",
+  "version": "0.0.10",
+  "publisher": "DeeSchaedler",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DSchaedler/dragonrubyautocomplete.git"
+  },
   "engines": {
     "vscode": "^1.90.0"
   },
