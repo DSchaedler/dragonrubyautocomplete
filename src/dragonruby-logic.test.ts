@@ -2,7 +2,6 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { computeConfidenceFromSignals, fileContainsDragonRubySignals, hasDragonRubyProjectMarkers } from './dragonruby-logic';
 import { completionForContext, createItems, baseSeed, addUnique } from './completion-data';
-import { dragonRubySnippetTriggerCharacters } from './providers';
 
 test('detects DragonRuby signals in a typical Ruby file', () => {
   const source = `
@@ -109,9 +108,4 @@ test('does not offer generic completions immediately after the << operator', () 
   assert.deepEqual(suggestions, []);
 });
 
-test('includes standard snippet prefixes and prioritizes snippet triggers', () => {
-  assert.ok(dragonRubySnippetTriggerCharacters.includes('t'));
-  assert.ok(dragonRubySnippetTriggerCharacters.includes('c'));
-  assert.ok(dragonRubySnippetTriggerCharacters.includes('h'));
-  assert.ok(dragonRubySnippetTriggerCharacters.includes('p'));
-});
+

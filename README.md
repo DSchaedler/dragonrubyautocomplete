@@ -11,9 +11,3 @@ This was vibe-coded in one adderall-fueled evening when I couldn't be bothered t
 - DragonRuby-specific globals such as `args`, `gtk`, and `$gtk`
 - Generic completions for common engine objects and methods derived from the project source files
 - Controller and keyboard key completions for common input patterns
-- Snippets for common game loops and rendering patterns, such as:
-  - `def tick args`
-  - `if args.inputs.keyboard.key_down...`
-  - `args.outputs.labels << ...`
-  - `args.outputs.sprites << ...`
-  - `args.outputs.solids << ...`

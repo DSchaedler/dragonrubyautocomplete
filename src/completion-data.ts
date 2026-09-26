@@ -13,8 +13,7 @@ const completionItemKind = vscodeRuntime?.CompletionItemKind ?? {
   Variable: 6,
   Property: 10,
   Method: 2,
-  Keyword: 14,
-  Snippet: 15
+  Keyword: 14
 };
 
 type CompletionSuggestion = {
@@ -85,7 +84,6 @@ export const baseSeed: DictionaryMap = {
     { label: 'gtk', kind: completionItemKind.Variable },
     { label: '$gtk', kind: completionItemKind.Variable },
     { label: 'tick', kind: completionItemKind.Method },
-    { label: 'def tick', kind: completionItemKind.Snippet },
     { label: 'render_target', kind: completionItemKind.Method },
     { label: 'inputs', kind: completionItemKind.Property },
     { label: 'outputs', kind: completionItemKind.Property },
@@ -296,7 +294,6 @@ export const BaseSeedDocumentation: Record<string, string> = {
   gtk: 'The DragonRuby runtime and platform API exposed through `gtk`.',
   $gtk: 'The global DragonRuby runtime object available in the game loop.',
   tick: 'The main game loop hook called once per frame with the current `args` object.',
-  'def tick': 'Snippet for the standard DragonRuby tick method.',
   render_target: 'Creates or references an offscreen render target for compositing, post-processing, and layered effects.',
   inputs: 'Input state for keyboard, mouse, touch, and controller data.',
   outputs: 'Rendering targets such as labels, sprites, solids, lines, and other draw commands.',

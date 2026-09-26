@@ -1,7 +1,7 @@
 import * as path from 'path';
 import * as vscode from 'vscode';
 import { clearProjectCompletionMap, getProjectCompletionMap, initializeEngineCacheState, rescanProjectEngine } from './engine-scan';
-import { createDragonRubyCompletionProvider, createDragonRubySnippetProvider, createKeywordProvider, dragonRubySnippetTriggerCharacters } from './providers';
+import { createDragonRubyCompletionProvider, createKeywordProvider } from './providers';
 import { clearProjectOverride, getProjectOverride, getProjectStatusSummary, initializeProjectDetectionState, notifyDragonRubyDetected, setProjectOverride } from './project-detection';
 
 // -----------------------------------------------------------------------------
@@ -56,9 +56,6 @@ export function activate(context: vscode.ExtensionContext) {
   // Register the main completion provider that understands DragonRuby runtime objects.
   const completionProvider = createDragonRubyCompletionProvider();
 
-  // Register common snippet templates such as tick, state, and rendering helpers.
-  const snippetProvider = createDragonRubySnippetProvider();
-
   // Register a secondary provider for plain Ruby keywords when the DragonRuby match is loose.
   const keywordProvider = createKeywordProvider();
 
@@ -66,12 +63,6 @@ export function activate(context: vscode.ExtensionContext) {
     { scheme: 'file', language: 'ruby' },
     completionProvider,
     '.', ' ', ':', '[', 'a', 'g', 'k', 'm', 'o', 's', 't'
-  );
-
-  const snippetDisposable = vscode.languages.registerCompletionItemProvider(
-    { scheme: 'file', language: 'ruby' },
-    snippetProvider,
-    ...dragonRubySnippetTriggerCharacters
   );
 
   const keywordDisposable = vscode.languages.registerCompletionItemProvider(
@@ -242,7 +233,6 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     completionDisposable,
-    snippetDisposable,
     keywordDisposable,
     openListener,
     activeEditorListener,
