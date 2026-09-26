@@ -22,6 +22,7 @@ type CompletionSuggestion = {
   detail?: string;
   insertText?: string;
   documentation?: unknown;
+  sortText?: string;
 };
 
 const completionApi = vscodeRuntime ?? {
@@ -31,6 +32,7 @@ const completionApi = vscodeRuntime ?? {
     public insertText?: string;
     public detail?: string;
     public documentation?: unknown;
+    public sortText?: string;
     constructor(label: string, kind: number) {
       this.label = label;
       this.kind = kind;
@@ -550,6 +552,7 @@ export function keywordMatches(prefix: string): CompletionSuggestion[] {
     .map((word) => {
       const item = new completionApi.CompletionItem(word, completionApi.CompletionItemKind.Keyword) as CompletionSuggestion;
       item.insertText = word;
+      item.sortText = `zzz${word}`;
       return item;
     });
 }

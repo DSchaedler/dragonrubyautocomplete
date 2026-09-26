@@ -12,6 +12,7 @@ const vscodeApi = vscodeRuntime ?? {
     public insertText?: string | { value: string };
     public detail?: string;
     public documentation?: unknown;
+    public sortText?: string;
     constructor(label: string, kind: number) {
       this.label = label;
       this.kind = kind;
@@ -92,6 +93,7 @@ export function createKeywordProvider(): any {
         .map((word) => {
           const item = new vscodeApi.CompletionItem(word, vscodeApi.CompletionItemKind.Keyword);
           item.insertText = word;
+          item.sortText = `zzz${word}`;
           item.detail = 'Ruby keyword';
           item.documentation = new vscodeApi.MarkdownString('Ruby language keyword available while editing DragonRuby code.');
           return item;

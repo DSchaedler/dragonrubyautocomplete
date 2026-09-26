@@ -109,6 +109,23 @@ test('does not offer generic completions immediately after the << operator', () 
   assert.deepEqual(suggestions, []);
 });
 
+test('keeps ruby keyword suggestions at the end of the completion list', () => {
+  const suggestions = completionForContext('i');
+  const ifIndex = suggestions.findIndex((item) => item.label === 'if');
+  const inputsIndex = suggestions.findIndex((item) => item.label === 'inputs');
+
+  assert.ok(ifIndex >= 0, 'Expected the if keyword to be present');
+  assert.ok(inputsIndex >= 0, 'Expected a DragonRuby input suggestion to be present');
+  assert.ok(ifItemAtEnd(suggestions, 'if', 'inputs'), 'Ruby keywords should be pushed after runtime suggestions in the returned list');
+});
+
+function ifItemAtEnd(suggestions: ReturnType<typeof completionForContext>, keywordLabel: string, runtimeLabel: string): boolean {
+  const keywordIndex = suggestions.findIndex((item) => item.label === keywordLabel);
+  const runtimeIndex = suggestions.findIndex((item) => item.label === runtimeLabel);
+
+  return keywordIndex > runtimeIndex;
+}
+
 test('only triggers completions after a period', () => {
   assert.deepEqual(getCompletionTriggerCharacters(), ['.']);
 });
