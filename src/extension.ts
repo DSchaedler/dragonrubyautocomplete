@@ -1,5 +1,14 @@
 import * as path from 'path';
-import * as vscode from 'vscode';
+import type * as vscodeApiType from 'vscode';
+
+const vscodeApi = (() => {
+  try {
+    return require('vscode') as typeof vscodeApiType;
+  } catch {
+    return undefined;
+  }
+})();
+
 import { clearProjectCompletionMap, getProjectCompletionMap, initializeEngineCacheState, rescanProjectEngine } from './engine-scan';
 import { createDragonRubyCompletionProvider, createKeywordProvider } from './providers';
 import { clearProjectOverride, getProjectOverride, getProjectStatusSummary, initializeProjectDetectionState, notifyDragonRubyDetected, setProjectOverride } from './project-detection';
@@ -12,8 +21,12 @@ import { clearProjectOverride, getProjectOverride, getProjectStatusSummary, init
 // -----------------------------------------------------------------------------
 
 function getCurrentProjectRoot(fileName?: string): string | undefined {
+  if (!vscodeApi) {
+    return undefined;
+  }
+
   if (!fileName) {
-    const activeEditor = vscode.window.activeTextEditor;
+    const activeEditor = vscodeApi.window.activeTextEditor;
     if (!activeEditor) {
       return undefined;
     }
@@ -28,7 +41,11 @@ function getCurrentProjectRoot(fileName?: string): string | undefined {
   return path.dirname(path.resolve(fileName));
 }
 
-function updateStatusBar(statusBar: vscode.StatusBarItem, fileName?: string): void {
+function updateStatusBar(statusBar: vscodeApiType.StatusBarItem, fileName?: string): void {
+  if (!vscodeApi) {
+    return;
+  }
+
   const projectRoot = getCurrentProjectRoot(fileName);
   if (!projectRoot) {
     statusBar.hide();
@@ -49,7 +66,16 @@ function updateStatusBar(statusBar: vscode.StatusBarItem, fileName?: string): vo
   statusBar.show();
 }
 
-export function activate(context: vscode.ExtensionContext) {
+export function getCompletionTriggerCharacters(): string[] {
+  return ['.'];
+}
+
+export function activate(context: vscodeApiType.ExtensionContext) {
+  const runtime = vscodeApi;
+  if (!runtime) {
+    return;
+  }
+
   initializeProjectDetectionState(context.workspaceState);
   initializeEngineCacheState(context.workspaceState);
 
@@ -58,54 +84,55 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Register a secondary provider for plain Ruby keywords when the DragonRuby match is loose.
   const keywordProvider = createKeywordProvider();
+  const completionTriggerCharacters = getCompletionTriggerCharacters();
 
-  const completionDisposable = vscode.languages.registerCompletionItemProvider(
+  const completionDisposable = vscodeApi.languages.registerCompletionItemProvider(
     { scheme: 'file', language: 'ruby' },
     completionProvider,
-    '.', ' ', ':', '[', 'a', 'g', 'k', 'm', 'o', 's', 't'
+    ...completionTriggerCharacters
   );
 
-  const keywordDisposable = vscode.languages.registerCompletionItemProvider(
+  const keywordDisposable = vscodeApi.languages.registerCompletionItemProvider(
     { scheme: 'file', language: 'ruby' },
     keywordProvider,
-    'd', 's', 'l', 'k', 'm', 'r'
+    ...completionTriggerCharacters
   );
 
-  const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 200);
+  const statusBarItem = vscodeApi.window.createStatusBarItem(vscodeApi.StatusBarAlignment.Right, 200);
   statusBarItem.command = 'dragonruby.toggleProjectAutocomplete';
   updateStatusBar(statusBarItem);
 
-  const enableCommand = vscode.commands.registerCommand('dragonruby.enableProjectAutocomplete', () => {
+  const enableCommand = vscodeApi.commands.registerCommand('dragonruby.enableProjectAutocomplete', () => {
     const projectRoot = getCurrentProjectRoot();
     if (!projectRoot) {
       return;
     }
 
     setProjectOverride(projectRoot, true);
-    updateStatusBar(statusBarItem, vscode.window.activeTextEditor?.document.fileName);
+    updateStatusBar(statusBarItem, vscodeApi.window.activeTextEditor?.document.fileName);
   });
 
-  const disableCommand = vscode.commands.registerCommand('dragonruby.disableProjectAutocomplete', () => {
+  const disableCommand = vscodeApi.commands.registerCommand('dragonruby.disableProjectAutocomplete', () => {
     const projectRoot = getCurrentProjectRoot();
     if (!projectRoot) {
       return;
     }
 
     setProjectOverride(projectRoot, false);
-    updateStatusBar(statusBarItem, vscode.window.activeTextEditor?.document.fileName);
+    updateStatusBar(statusBarItem, vscodeApi.window.activeTextEditor?.document.fileName);
   });
 
-  const resetCommand = vscode.commands.registerCommand('dragonruby.resetProjectAutocomplete', () => {
+  const resetCommand = vscodeApi.commands.registerCommand('dragonruby.resetProjectAutocomplete', () => {
     const projectRoot = getCurrentProjectRoot();
     if (!projectRoot) {
       return;
     }
 
     clearProjectOverride(projectRoot);
-    updateStatusBar(statusBarItem, vscode.window.activeTextEditor?.document.fileName);
+    updateStatusBar(statusBarItem, vscodeApi.window.activeTextEditor?.document.fileName);
   });
 
-  const toggleCommand = vscode.commands.registerCommand('dragonruby.toggleProjectAutocomplete', () => {
+  const toggleCommand = vscodeApi.commands.registerCommand('dragonruby.toggleProjectAutocomplete', () => {
     const projectRoot = getCurrentProjectRoot();
     if (!projectRoot) {
       return;
@@ -113,77 +140,81 @@ export function activate(context: vscode.ExtensionContext) {
 
     const current = getProjectOverride(projectRoot);
     setProjectOverride(projectRoot, current === undefined ? true : !current);
-    updateStatusBar(statusBarItem, vscode.window.activeTextEditor?.document.fileName);
+    updateStatusBar(statusBarItem, vscodeApi.window.activeTextEditor?.document.fileName);
   });
 
-  const rescanCommand = vscode.commands.registerCommand('dragonruby.rescanEngine', async () => {
+  const rescanCommand = vscodeApi.commands.registerCommand('dragonruby.rescanEngine', async () => {
     const projectRoot = getCurrentProjectRoot();
     if (!projectRoot) {
       return;
     }
 
-    const status = vscode.window.setStatusBarMessage('DragonRuby: rescan in progress…');
+    const status = vscodeApi.window.setStatusBarMessage('DragonRuby: rescan in progress…');
     try {
       await rescanProjectEngine(projectRoot);
-      const fileName = vscode.window.activeTextEditor?.document.fileName;
+      const fileName = vscodeApi.window.activeTextEditor?.document.fileName;
       if (fileName) {
         updateStatusBar(statusBarItem, fileName);
       }
-      void vscode.window.showInformationMessage('DragonRuby engine rescan complete for this project.');
+      void vscodeApi.window.showInformationMessage('DragonRuby engine rescan complete for this project.');
     } finally {
       status.dispose();
     }
   });
 
-  const clearDerivedCommand = vscode.commands.registerCommand('dragonruby.clearDerivedCompletions', () => {
+  const clearDerivedCommand = vscodeApi.commands.registerCommand('dragonruby.clearDerivedCompletions', () => {
     const projectRoot = getCurrentProjectRoot();
     if (!projectRoot) {
       return;
     }
 
-    const status = vscode.window.setStatusBarMessage('DragonRuby: clearing derived completions…');
+    const status = vscodeApi.window.setStatusBarMessage('DragonRuby: clearing derived completions…');
     try {
       clearProjectCompletionMap(projectRoot);
-      void vscode.window.showInformationMessage('Cleared engine-derived completions for this project.');
+      void vscodeApi.window.showInformationMessage('Cleared engine-derived completions for this project.');
     } finally {
       status.dispose();
     }
   });
 
-  const projectStatusCommand = vscode.commands.registerCommand('dragonruby.showProjectStatus', () => {
+  const projectStatusCommand = vscodeApi.commands.registerCommand('dragonruby.showProjectStatus', () => {
     const projectRoot = getCurrentProjectRoot();
     if (!projectRoot) {
       return;
     }
 
     const statusSummary = getProjectStatusSummary(projectRoot);
-    void vscode.window.showInformationMessage(`DragonRuby project status: ${statusSummary}`);
+    void vscodeApi.window.showInformationMessage(`DragonRuby project status: ${statusSummary}`);
   });
 
   async function resetSettingIfNeeded(key: string): Promise<void> {
-    const config = vscode.workspace.getConfiguration('dragonruby-autocomplete');
+    if (!runtime) {
+      return;
+    }
+
+    const config = runtime.workspace.getConfiguration('dragonruby-autocomplete');
     const inspected = config.inspect<boolean>(key);
 
     if (inspected?.workspaceValue !== undefined) {
-      await config.update(key, false, vscode.ConfigurationTarget.Workspace);
+      await config.update(key, false, runtime.ConfigurationTarget.Workspace);
       return;
     }
 
     if (inspected?.globalValue !== undefined) {
-      await config.update(key, false, vscode.ConfigurationTarget.Global);
+      await config.update(key, false, runtime.ConfigurationTarget.Global);
       return;
     }
 
-    await config.update(key, false, vscode.ConfigurationTarget.Workspace);
+    await config.update(key, false, runtime.ConfigurationTarget.Workspace);
   }
 
-  const configurationListener = vscode.workspace.onDidChangeConfiguration(async (event) => {
+  const configurationListener = vscodeApi.workspace.onDidChangeConfiguration(async (event) => {
     if (!event.affectsConfiguration('dragonruby-autocomplete.rescanEngine') &&
         !event.affectsConfiguration('dragonruby-autocomplete.clearDerivedCompletions')) {
       return;
     }
 
-    const config = vscode.workspace.getConfiguration('dragonruby-autocomplete');
+    const config = vscodeApi.workspace.getConfiguration('dragonruby-autocomplete');
     const projectRoot = getCurrentProjectRoot();
 
     if (!projectRoot) {
@@ -191,22 +222,22 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     if (event.affectsConfiguration('dragonruby-autocomplete.rescanEngine') && config.get<boolean>('rescanEngine')) {
-      const status = vscode.window.setStatusBarMessage('DragonRuby: settings-triggered rescan in progress…');
+      const status = vscodeApi.window.setStatusBarMessage('DragonRuby: settings-triggered rescan in progress…');
       try {
         await rescanProjectEngine(projectRoot);
         await resetSettingIfNeeded('rescanEngine');
-        void vscode.window.showInformationMessage('DragonRuby engine rescan run from settings.');
+        void vscodeApi.window.showInformationMessage('DragonRuby engine rescan run from settings.');
       } finally {
         status.dispose();
       }
     }
 
     if (event.affectsConfiguration('dragonruby-autocomplete.clearDerivedCompletions') && config.get<boolean>('clearDerivedCompletions')) {
-      const status = vscode.window.setStatusBarMessage('DragonRuby: clearing derived completions from settings…');
+      const status = vscodeApi.window.setStatusBarMessage('DragonRuby: clearing derived completions from settings…');
       try {
         clearProjectCompletionMap(projectRoot);
         await resetSettingIfNeeded('clearDerivedCompletions');
-        void vscode.window.showInformationMessage('Cleared engine-derived completions from settings.');
+        void vscodeApi.window.showInformationMessage('Cleared engine-derived completions from settings.');
       } finally {
         status.dispose();
       }
@@ -215,7 +246,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // When a Ruby file is opened, re-check whether it belongs to a DragonRuby project.
   // This helps recognize non-default folder names or non-standard layouts.
-  const openListener = vscode.workspace.onDidOpenTextDocument((document) => {
+  const openListener = vscodeApi.workspace.onDidOpenTextDocument((document) => {
     if (document.fileName.toLowerCase().endsWith('.rb')) {
       notifyDragonRubyDetected(document);
       updateStatusBar(statusBarItem, document.fileName);
@@ -224,7 +255,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // When the active editor changes, check the current file again so the plugin can
   // activate immediately for newly opened DragonRuby files.
-  const activeEditorListener = vscode.window.onDidChangeActiveTextEditor((editor) => {
+  const activeEditorListener = vscodeApi.window.onDidChangeActiveTextEditor((editor) => {
     if (editor && editor.document.fileName.toLowerCase().endsWith('.rb')) {
       notifyDragonRubyDetected(editor.document);
       updateStatusBar(statusBarItem, editor.document.fileName);
