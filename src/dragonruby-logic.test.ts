@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { computeConfidenceFromSignals, fileContainsDragonRubySignals, hasDragonRubyProjectMarkers } from './dragonruby-logic';
 import { completionForContext, createItems, baseSeed, addUnique } from './completion-data';
+import { dragonRubySnippetTriggerCharacters } from './providers';
 
 test('detects DragonRuby signals in a typical Ruby file', () => {
   const source = `
@@ -94,4 +95,20 @@ test('keeps the simple fallback text for discovered entries without a base-seed 
   const doc = createItems([entry])[0].documentation as { value: string };
   assert.ok(String(doc.value).toLowerCase().includes('not specified'));
   assert.ok(String(doc.value).toLowerCase().includes('please refer to engine docs'));
+});
+
+test('resolves audio completion buckets from a nested args.audio context', () => {
+  const labels = completionForContext('args.audio.').map((item) => item.label);
+
+  assert.ok(labels.includes('play'));
+  assert.ok(labels.includes('pause'));
+});
+
+test('does not offer generic completions immediately after the << operator', () => {
+  const suggestions = completionForContext('args.outputs.labels << ');
+  assert.deepEqual(suggestions, []);
+});
+
+test('includes the standard tick trigger in snippet trigger characters', () => {
+  assert.ok(dragonRubySnippetTriggerCharacters.includes('t'));
 });

@@ -2,7 +2,7 @@
   "name": "dragonruby-autocomplete",
   "displayName": "DragonRuby Autocomplete",
   "description": "Autocomplete support for DragonRuby game code in VS Code.",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "publisher": "DeeSchaedler",
   "license": "SEE LICENSE IN LICENSE.txt",
   "repository": {

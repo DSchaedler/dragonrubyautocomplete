@@ -1,4 +1,37 @@
-import * as vscode from 'vscode';
+let vscodeRuntime: typeof import('vscode') | undefined;
+try {
+  vscodeRuntime = require('vscode');
+} catch {
+  vscodeRuntime = undefined;
+}
+
+const vscodeApi = vscodeRuntime ?? {
+  CompletionItem: class {
+    public label: string;
+    public kind: number;
+    public insertText?: string | { value: string };
+    public detail?: string;
+    public documentation?: unknown;
+    constructor(label: string, kind: number) {
+      this.label = label;
+      this.kind = kind;
+    }
+  },
+  MarkdownString: class {
+    public value: string;
+    constructor(value: string) {
+      this.value = value;
+    }
+  },
+  CompletionItemKind: {
+    Snippet: 15,
+    Keyword: 14,
+    Property: 10,
+    Method: 2,
+    Variable: 6
+  }
+};
+
 import { completionForContext, rubyKeywords } from './completion-data';
 import { getProjectCompletionMap } from './engine-scan';
 import { detectDragonRubyProject, notifyDragonRubyDetected } from './project-detection';
@@ -10,6 +43,8 @@ import { detectDragonRubyProject, notifyDragonRubyDetected } from './project-det
 // logic isolated from the data model and project detection so each concern stays
 // easier to reason about.
 // -----------------------------------------------------------------------------
+
+export const dragonRubySnippetTriggerCharacters = ['d', 's', 'l', 'k', 'm', 'r', 't'] as const;
 
 const snippets: Record<string, { body: string; detail: string; doc: string }> = {
   tick: {
@@ -94,19 +129,19 @@ const snippets: Record<string, { body: string; detail: string; doc: string }> = 
   }
 };
 
-function addDetail(item: vscode.CompletionItem, detail: string, doc: string): vscode.CompletionItem {
+function addDetail(item: any, detail: string, doc: string): any {
   item.detail = detail;
-  item.documentation = new vscode.MarkdownString(doc);
+  item.documentation = new vscodeApi.MarkdownString(doc);
   return item;
 }
 
-export function isDragonRubyFile(document: vscode.TextDocument): boolean {
+export function isDragonRubyFile(document: { fileName: string }): boolean {
   return detectDragonRubyProject(document.fileName);
 }
 
-export function createDragonRubyCompletionProvider(): vscode.CompletionItemProvider {
+export function createDragonRubyCompletionProvider(): any {
   return {
-    provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
+    provideCompletionItems(document: any, position: any) {
       if (!isDragonRubyFile(document)) {
         // Returning an empty array is safer than undefined because the provider can
         // still participate in the completion pipeline without throwing or
@@ -118,11 +153,11 @@ export function createDragonRubyCompletionProvider(): vscode.CompletionItemProvi
       const line = document.lineAt(position).text.slice(0, position.character);
       const projectMap = getProjectCompletionMap(document.fileName);
       return completionForContext(line, projectMap).map((item) => {
-        const completionItem = new vscode.CompletionItem(item.label, item.kind as vscode.CompletionItemKind);
+        const completionItem = new vscodeApi.CompletionItem(item.label, item.kind as number);
         completionItem.detail = item.detail ?? 'DragonRuby runtime';
         completionItem.insertText = item.insertText ?? item.label;
         if (typeof item.documentation !== 'undefined') {
-          completionItem.documentation = item.documentation as string | vscode.MarkdownString | undefined;
+          completionItem.documentation = item.documentation as string | { value: string } | undefined;
         }
         return completionItem;
       });
@@ -130,21 +165,21 @@ export function createDragonRubyCompletionProvider(): vscode.CompletionItemProvi
   };
 }
 
-export function createDragonRubySnippetProvider(): vscode.CompletionItemProvider {
+export function createDragonRubySnippetProvider(): any {
   return {
     provideCompletionItems() {
       return Object.entries(snippets).map(([label, value]) => {
-        const item = new vscode.CompletionItem(label, vscode.CompletionItemKind.Snippet);
-        item.insertText = new vscode.SnippetString(value.body);
+        const item = new vscodeApi.CompletionItem(label, vscodeApi.CompletionItemKind.Snippet);
+        item.insertText = new (vscodeApi as any).SnippetString(value.body);
         return addDetail(item, value.detail, value.doc);
       });
     }
   };
 }
 
-export function createKeywordProvider(): vscode.CompletionItemProvider {
+export function createKeywordProvider(): any {
   return {
-    provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
+    provideCompletionItems(document: any, position: any) {
       if (!isDragonRubyFile(document)) {
         return [];
       }
@@ -154,10 +189,10 @@ export function createKeywordProvider(): vscode.CompletionItemProvider {
       return rubyKeywords
         .filter((word) => word.toLowerCase().startsWith(prefix.toLowerCase()))
         .map((word) => {
-          const item = new vscode.CompletionItem(word, vscode.CompletionItemKind.Keyword);
+          const item = new vscodeApi.CompletionItem(word, vscodeApi.CompletionItemKind.Keyword);
           item.insertText = word;
           item.detail = 'Ruby keyword';
-          item.documentation = new vscode.MarkdownString('Ruby language keyword available while editing DragonRuby code.');
+          item.documentation = new vscodeApi.MarkdownString('Ruby language keyword available while editing DragonRuby code.');
           return item;
         });
     }

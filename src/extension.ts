@@ -1,7 +1,7 @@
 import * as path from 'path';
 import * as vscode from 'vscode';
 import { clearProjectCompletionMap, getProjectCompletionMap, initializeEngineCacheState, rescanProjectEngine } from './engine-scan';
-import { createDragonRubyCompletionProvider, createDragonRubySnippetProvider, createKeywordProvider } from './providers';
+import { createDragonRubyCompletionProvider, createDragonRubySnippetProvider, createKeywordProvider, dragonRubySnippetTriggerCharacters } from './providers';
 import { clearProjectOverride, getProjectOverride, getProjectStatusSummary, initializeProjectDetectionState, notifyDragonRubyDetected, setProjectOverride } from './project-detection';
 
 // -----------------------------------------------------------------------------
@@ -71,7 +71,7 @@ export function activate(context: vscode.ExtensionContext) {
   const snippetDisposable = vscode.languages.registerCompletionItemProvider(
     { scheme: 'file', language: 'ruby' },
     snippetProvider,
-    'd', 's', 'l', 'k', 'm', 'r'
+    ...dragonRubySnippetTriggerCharacters
   );
 
   const keywordDisposable = vscode.languages.registerCompletionItemProvider(
@@ -169,6 +169,23 @@ export function activate(context: vscode.ExtensionContext) {
     void vscode.window.showInformationMessage(`DragonRuby project status: ${statusSummary}`);
   });
 
+  async function resetSettingIfNeeded(key: string): Promise<void> {
+    const config = vscode.workspace.getConfiguration('dragonruby-autocomplete');
+    const inspected = config.inspect<boolean>(key);
+
+    if (inspected?.workspaceValue !== undefined) {
+      await config.update(key, false, vscode.ConfigurationTarget.Workspace);
+      return;
+    }
+
+    if (inspected?.globalValue !== undefined) {
+      await config.update(key, false, vscode.ConfigurationTarget.Global);
+      return;
+    }
+
+    await config.update(key, false, vscode.ConfigurationTarget.Workspace);
+  }
+
   const configurationListener = vscode.workspace.onDidChangeConfiguration(async (event) => {
     if (!event.affectsConfiguration('dragonruby-autocomplete.rescanEngine') &&
         !event.affectsConfiguration('dragonruby-autocomplete.clearDerivedCompletions')) {
@@ -186,7 +203,7 @@ export function activate(context: vscode.ExtensionContext) {
       const status = vscode.window.setStatusBarMessage('DragonRuby: settings-triggered rescan in progress…');
       try {
         await rescanProjectEngine(projectRoot);
-        await config.update('rescanEngine', false, vscode.ConfigurationTarget.Workspace);
+        await resetSettingIfNeeded('rescanEngine');
         void vscode.window.showInformationMessage('DragonRuby engine rescan run from settings.');
       } finally {
         status.dispose();
@@ -197,7 +214,7 @@ export function activate(context: vscode.ExtensionContext) {
       const status = vscode.window.setStatusBarMessage('DragonRuby: clearing derived completions from settings…');
       try {
         clearProjectCompletionMap(projectRoot);
-        await config.update('clearDerivedCompletions', false, vscode.ConfigurationTarget.Workspace);
+        await resetSettingIfNeeded('clearDerivedCompletions');
         void vscode.window.showInformationMessage('Cleared engine-derived completions from settings.');
       } finally {
         status.dispose();

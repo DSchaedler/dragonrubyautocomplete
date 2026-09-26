@@ -208,6 +208,16 @@ export const baseSeed: DictionaryMap = {
     { label: 'audio', kind: completionItemKind.Property },
     { label: 'sounds', kind: completionItemKind.Property }
   ],
+  audio: [
+    { label: 'play', kind: completionItemKind.Method },
+    { label: 'pause', kind: completionItemKind.Method },
+    { label: 'stop', kind: completionItemKind.Method },
+    { label: 'seek', kind: completionItemKind.Method },
+    { label: 'mute', kind: completionItemKind.Method },
+    { label: 'music', kind: completionItemKind.Property },
+    { label: 'sounds', kind: completionItemKind.Property },
+    { label: 'gain', kind: completionItemKind.Property }
+  ],
   state: [
     { label: 'tick_count', kind: completionItemKind.Property },
     { label: 'player', kind: completionItemKind.Property },
@@ -357,7 +367,14 @@ export const BaseSeedDocumentation: Record<string, string> = {
   primitives: 'Array of low-level primitive draw commands.',
   debug: 'Array of debug primitives used for visualization and layout debugging.',
   audio: 'Audio playback state and output helpers.',
+  play: 'Starts music or a sound effect playback for the current audio channel.',
+  pause: 'Pauses the current music or sound playback without resetting state.',
+  stop: 'Stops the current audio playback immediately.',
+  seek: 'Seeks within the active audio stream to a new playback position.',
+  mute: 'Mutes or unmutes the active audio output.',
+  music: 'The currently active music state or music track metadata.',
   sounds: 'Array of sound effects and music playback commands.',
+  gain: 'Controls the current audio gain or volume level for a playback channel.',
   tick_count: 'The running frame count tracked by the game state.',
   player: 'Common player state slot used by many games.',
   score: 'Score value stored in the game state.',
@@ -549,6 +566,10 @@ export function keywordMatches(prefix: string): CompletionSuggestion[] {
 // -----------------------------------------------------------------------------
 export function completionForContext(line: string, completionMap: DictionaryMap = baseSeed): CompletionSuggestion[] {
   const trimmed = line.trim();
+  if (trimmed.match(/<<\s*$/)) {
+    return [];
+  }
+
   const tokens = trimmed.split(/\s|[\(\[\{,=:\]\)\.;]+/).filter(Boolean);
   const current = tokens[tokens.length - 1] ?? '';
   const previous = tokens[tokens.length - 2] ?? '';
@@ -691,6 +712,7 @@ export function completionForContext(line: string, completionMap: DictionaryMap 
     ...createItems(completionMap.args ?? []),
     ...createItems(completionMap.inputs ?? []),
     ...createItems(completionMap.outputs ?? []),
+    ...createItems(completionMap.audio ?? []),
     ...createItems(completionMap.gtk ?? []),
     ...createItems(completionMap.geometry ?? []),
     ...createItems(completionMap.layout ?? []),

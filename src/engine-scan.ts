@@ -103,6 +103,9 @@ function collectFromEngine(projectRoot?: string): DictionaryMap {
     for (const match of text.matchAll(/args\.layout\.([A-Za-z_][A-Za-z0-9_]*)/g)) {
       addUnique(map, 'layout', match[1]);
     }
+    for (const match of text.matchAll(/args\.audio\.([A-Za-z_][A-Za-z0-9_]*)/g)) {
+      addUnique(map, 'audio', match[1]);
+    }
     for (const match of text.matchAll(/controller_(one|two|three|four)\.([A-Za-z_][A-Za-z0-9_]*)/g)) {
       addUnique(map, 'controller', match[2]);
     }
@@ -166,6 +169,9 @@ export async function scanEngineDataAsync(projectRoot?: string): Promise<Diction
         }
         for (const match of text.matchAll(/args\.layout\.([A-Za-z_][A-Za-z0-9_]*)/g)) {
           addUnique(map, 'layout', match[1]);
+        }
+        for (const match of text.matchAll(/args\.audio\.([A-Za-z_][A-Za-z0-9_]*)/g)) {
+          addUnique(map, 'audio', match[1]);
         }
         for (const match of text.matchAll(/controller_(one|two|three|four)\.([A-Za-z_][A-Za-z0-9_]*)/g)) {
           addUnique(map, 'controller', match[2]);
