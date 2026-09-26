@@ -1,30 +1,75 @@
 {
-	"name": "dragonrubyautocomplete",
-	"displayName": "DragonRubyAutocomplete",
-	"description": "",
-	"version": "v0.0.9-dev",
-	"engines": {
-		"vscode": "^1.90.0"
-	},
-	"categories": [
-		"Snippets"
-	],
-	"contributes": {
-		"snippets": [
-			{ "language": "ruby" , "path": "./snippets/blocks.json" },
-			{ "language": "ruby" , "path": "./snippets/outputs.json" },
-			{ "language": "ruby" , "path": "./snippets/inputs.json" },
-			{ "language": "ruby" , "path": "./snippets/inputs.mouse.json" },
-			{ "language": "ruby" , "path": "./snippets/inputs.controller_one.json" },
-			{ "language": "ruby" , "path": "./snippets/inputs.controller_two.json" },
-			{ "language": "ruby" , "path": "./snippets/inputs.controller_three.json" },
-			{ "language": "ruby" , "path": "./snippets/inputs.controller_four.json" },
-			{ "language": "ruby" , "path": "./snippets/inputs.touch.json" },
-			{ "language": "ruby" , "path": "./snippets/inputs.keyboard.json" },
-			{ "language": "ruby" , "path": "./snippets/gtk.json" },
-			{ "language": "ruby" , "path": "./snippets/gtk.methods.json" },
-			{ "language": "ruby" , "path": "./snippets/gtk.class_macros.json" },
-			{ "language": "ruby" , "path": "./snippets/geometry.json" }
-		]
-	}
+  "name": "dragonruby-vscode-autocomplete",
+  "displayName": "DragonRuby VS Code Autocomplete",
+  "description": "Autocomplete support for DragonRuby game code in VS Code.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:ruby"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "dragonruby.enableProjectAutocomplete",
+        "title": "DragonRuby: Enable autocomplete for this project"
+      },
+      {
+        "command": "dragonruby.disableProjectAutocomplete",
+        "title": "DragonRuby: Disable autocomplete for this project"
+      },
+      {
+        "command": "dragonruby.resetProjectAutocomplete",
+        "title": "DragonRuby: Reset autocomplete for this project"
+      },
+      {
+        "command": "dragonruby.toggleProjectAutocomplete",
+        "title": "DragonRuby: Toggle autocomplete for this project"
+      },
+      {
+        "command": "dragonruby.rescanEngine",
+        "title": "DragonRuby: Rescan engine completions"
+      },
+      {
+        "command": "dragonruby.clearDerivedCompletions",
+        "title": "DragonRuby: Clear engine-derived completions"
+      },
+      {
+        "command": "dragonruby.showProjectStatus",
+        "title": "DragonRuby: Show project status"
+      }
+    ],
+    "configuration": {
+      "title": "DragonRuby Autocomplete",
+      "properties": {
+        "dragonruby-autocomplete.rescanEngine": {
+          "type": "boolean",
+          "default": false,
+          "description": "Trigger a full engine rescan for the current project. This resets to false after running."
+        },
+        "dragonruby-autocomplete.clearDerivedCompletions": {
+          "type": "boolean",
+          "default": false,
+          "description": "Clear engine-derived, non-hardcoded completions for the current project. This resets to false after running."
+        }
+      }
+    }
+  },
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "test": "npm run compile && node --test ./out/**/*.test.js",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.4.5"
+  }
 }
